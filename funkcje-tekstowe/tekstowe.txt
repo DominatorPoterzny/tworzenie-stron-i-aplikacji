@@ -5,8 +5,8 @@ strpos
 strreplace
 strtolower
 strtoupper
-ucwords --tu skończyłem
+ucwords 
 trim
 strstr
 substr
-str.pad
+str_pad

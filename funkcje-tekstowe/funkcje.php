@@ -32,6 +32,18 @@
     <hr>
     <?php echo ucwords("sIEMA byCZq") ?>
     /*zamienia na dużą litere każdy nowy wyraz */
+    <hr>
+    <?php echo trim("  costam beka z cb    ") ?>
+    /*trim usuwa spacje/białe pola na początku i na końcu */
+    <hr>
+    <?= strstr("lubie nie byc w nie europie", "nie")  ?>
+    /*szuka do pierwszego szukanego wyrazu i wyświetla dalej tekst */
+    <hr>
+    <?= substr("czesc Kolego", 2, 4)?> <br>
+    <?= substr("czesc Kolego", 2)?>
+    /*pierwsza liczba/wartość wybiera początek wyświetlania tekstu, a druga wartość to koniec wyświetlania tekstu */
+    <hr>
+    <?= str_pad("fajny tekst w PHP", ) ?>
 
 </body>?
 </html>
