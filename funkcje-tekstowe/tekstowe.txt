@@ -1,0 +1,12 @@
+strlen
+str_word_count
+strrev
+strpos
+strreplace
+strtolower
+strtoupper
+ucwords --tu skończyłem
+trim
+strstr
+substr
+str.pad
