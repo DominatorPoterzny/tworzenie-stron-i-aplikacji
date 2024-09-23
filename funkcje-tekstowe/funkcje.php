@@ -43,7 +43,10 @@
     <?= substr("czesc Kolego", 2)?>
     /*pierwsza liczba/wartość wybiera początek wyświetlania tekstu, a druga wartość to koniec wyświetlania tekstu */
     <hr>
-    <?= str_pad("fajny tekst w PHP", ) ?>
+    <?= str_pad("fajny tekst w PHP", 21, "-?", STR_PAD_BOTH ) ?> <br>
+    <?= str_pad("fajny tekst w PHP", 21, "-?", STR_PAD_RIGHT ) ?>
+    /* 21 to liczba miejsca do wykorzystania, "-?" to jest tekst który ma się wyświetlać po prawej lub po lewej stronie tekstu, jeśli daliśmy odpowiednią liczbe miejsca(jak dam liczbe 11 to nie wyświeli się żaden "-?") STR_PAD_BOTH to jest to że "-?" wyswieli się po obu stronach tekstu, a STR_PAD_RIGHT wyświetli się tylko po prawej stronie */
 
+    <hr>
 </body>?
 </html>
