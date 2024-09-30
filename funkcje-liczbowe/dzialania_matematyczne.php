@@ -24,8 +24,7 @@
     <?php $r = 16; $alfa = 93; ?>
     <p>Obwód koła o promieniu 16 jest równy <?= round(2*pi()*$r, 4)?></p>
     <p>Pole koła o promieniu 16 jest równy <?= round(pi()*$r**2, 4)?> j<sup>2</sup></p>
-    <p>Pole wycinka koła o promieniu 16 jest równy <?= round(pi()*$r**2*$alfa/360, 4)?> j<sup>2</sup></p>
-
+    <p>Pole wycinka koła o promieniu 16 i o kącie środkowym 93&deg; jest równy <?= round(pi()*$r**2*$alfa/360, 4)?> j<sup>2</sup></p>
     </fieldset>
 </body>
 </html>
