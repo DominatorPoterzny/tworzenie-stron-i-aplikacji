@@ -30,7 +30,7 @@
     <?php echo ("var_dump dla bool: "); var_dump($bool) ;?>
     <hr>
     <?php 
-    define("LATA", 1939);
+    define("LATA", 1939); /* to jest stała*/
     define("IMIE", "adam");
     ?>
     <p> print dla pierwszej stałej: <?php print LATA ?></p>
