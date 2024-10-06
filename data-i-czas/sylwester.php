@@ -24,5 +24,8 @@
     <br>
     <hr>
     <p id="szkolny">Rozpoczęcie tego roku szkolnego odbyło się w <?=date('l', mktime(0, 0, 0, 9, 2, 2024)); ?> i był to <?=date("z", mktime(0, 0, 0, 9, 2, 2024)) ?> dzień roku.</p>
+    <?php echo "29 września 2027 to ". date("l",mktime(0,0,0,9,29,2027)) #to "l" z połączeniem pokazuje dzień tygodnia, a wsm to sama l to pokazuje  ?>
+    <?=date("m-d-y") <br> /* miesiąc-dzień-rok*/
+    date()?> 
 </body>
 </html>
