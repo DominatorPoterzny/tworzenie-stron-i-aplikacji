@@ -8,10 +8,11 @@
 </head>
 
 <body>
-    <ol style="list-style-type: upper-roman"><?php
+    <ol style="list-style-type: upper-roman">
+        <?php
         for ($i = 1; $i <= 100; $i++) { ?>
-           <li style="margin-left: 40px;">To jest <?=$i ?> element listy</li> 
-        <?php } ?> 
+            <li style="margin-left: 40px;">To jest <?= $i ?> element listy</li>
+        <?php } ?>
     </ol>
 </body>
 
