@@ -19,27 +19,27 @@
     }
 </style>
 <body>
-    <?php $miesiac=rand(1,15) ?>
+    <?php $miesiac=rand(11,12) ?>
     <h1><?= $miesiac?></h1>
    <h3> <?php switch($miesiac){
-    case 0:
     case 1:
     case 2:
+    case 3:
         echo "I kwartał";
         break;
-    case 3:
     case 4:
     case 5:
+    case 6:
         echo "II kwartał";
         break;
-    case 6:
     case 7:
     case 8:
+    case 9:
         echo "III kwartał";
         break;
-    case 9:
     case 10:
     case 11:
+    case 12:
         echo "IV kwartał";
         break;
     default:
