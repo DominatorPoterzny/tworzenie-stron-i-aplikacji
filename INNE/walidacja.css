@@ -1,25 +1,27 @@
-fieldset{
-    border: 1px blue solid;
-    border-radius: 20px;
-    padding: 15px;
+fieldset {
+	border: 1px blue solid;
+	border-radius: 20px;
+	padding: 15px;
 }
-legend{
-    color: blue;
-    text-align: center;
+legend {
+	color: blue;
+	text-align: center;
 }
-input{
-    border: 2px orange solid;
-    width: 100%;
-    padding: 5px;
+input,
+select {
+	border: 2px orange solid;
+	width: 100%;
+	padding: 5px;
 }
-#button{
-    background-color: blue;
-    border: 0px;
-    color: white;
+#button {
+	background-color: blue;
+	border: 0px;
+	color: white;
+    padding: 10px;
 }
-body{
-    font-size: 15px;
+body {
+	font-size: 15px;
 }
-#uwagi{
-    width: 100%;
+#uwagi {
+	width: 100%;
 }
