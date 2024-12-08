@@ -1,5 +1,5 @@
 fieldset {
-	border: 1px blue solid;
+	border: 2px blue solid;
 	border-radius: 20px;
 	padding: 15px;
 }
@@ -12,6 +12,7 @@ select {
 	border: 2px orange solid;
 	width: 100%;
 	padding: 5px;
+    border-radius: 5px;
 }
 #button {
 	background-color: blue;
@@ -22,6 +23,6 @@ select {
 body {
 	font-size: 15px;
 }
-#uwagi {
+#com {
 	width: 100%;
 }

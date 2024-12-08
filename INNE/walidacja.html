@@ -15,7 +15,7 @@
             <legend>Dane pacjenta</legend>
 
             <label for="name">Imię:</label><br>
-            <input type="text" name="name" id="name" placeholder="Wprowadź imię" required width=""><br>
+            <input type="text" name="name" id="name" placeholder="Wprowadź imię" required><br>
 
             <label for="sname">Nazwisko:</label><br>
             <input type="text" name="sname" id="sname" placeholder="Wprowadż nazwisko" required><br>
@@ -29,20 +29,20 @@
             <label for="tel">Numer telefonu:</label><br>
             <input type="tel" name="tel" id="tel" placeholder="Wprowadź numer telefonu" required><br>
 
-            <label for="ulica">Ulica:</label><br>
-            <input type="text" name="ulica" id="ulica" placeholder="Wprowadź ulicę" required><br>
+            <label for="street">Ulica:</label><br>
+            <input type="text" name="street" id="street" placeholder="Wprowadź ulicę" required><br>
 
-            <label for="numer">Numer domu:</label><br>
-            <input type="text" name="numer" id="numer" placeholder="Wprowadź numer domu" required><br>
+            <label for="number">Numer domu:</label><br>
+            <input type="text" name="number" id="number" placeholder="Wprowadź numer domu" required><br>
 
             <label for="nr-miesz">Numer mieszkania:</label><br>
-            <input type="text" name="nr-miesz" id="nr-miesz" placeholder="Wprowadź numer mieszkania"><br>
+            <input type="text" name="nr-m" id="nr-m" placeholder="Wprowadź numer mieszkania"><br>
 
-            <label for="kod">Kod pocztowy:</label><br>
-            <input type="text" name="kod" id="kod" placeholder="00-000" required><br>
+            <label for="post">Kod pocztowy:</label><br>
+            <input type="text" name="post" id="post" placeholder="00-000" required><br>
 
-            <label for="miasto">Miasto:</label><br>
-            <input type="text" name="miasto" id="miasto" placeholder="Wprowadź miasto" required><br>
+            <label for="city">Miasto:</label><br>
+            <input type="text" name="city" id="city" placeholder="Wprowadź miasto" required><br>
 
             <label for="data">Data urodzenia:</label><br>
             <input type="date" name="data" id="data" required><br>
@@ -50,8 +50,8 @@
 
         <fieldset>
             <legend>Dane dotyczące wizyty</legend>
-            <label for="lekarz">Lekarz:</label><br>
-            <select name="lekarz" id="lekarz">
+            <label for="doctor">Lekarz:</label><br>
+            <select name="doctor" id="doctor">
                 <option value="">Wybierz lekarza</option>
                 <option value="neurolog">Neurolog</option>
                 <option value="stomatolog">Stomatolog</option>
@@ -60,11 +60,11 @@
             <label for="data-w">Data wizyty:</label><br>
             <input type="date" name="data-w" id="data-w"><br>
 
-            <label for="godz"> Godzina wizyty:</label><br>
-            <input type="time" name="godz" id="godz"><br>
+            <label for="time"> Godzina wizyty:</label><br>
+            <input type="time" name="time" id="time"><br>
 
-            <label for="uwagi">Dodatkowe uwagi:</label><br>
-            <textarea name="uwagi" id="uwagi" cols="100" rows="10" placeholder="Podaj dodatkowe uwagi"></textarea>
+            <label for="com">Dodatkowe uwagi:</label><br>
+            <textarea name="com" id="com" cols="100" rows="10" placeholder="Podaj dodatkowe uwagi"></textarea>
         </fieldset>
 
         <input id="button" type="submit" value="Umów wizytę">
