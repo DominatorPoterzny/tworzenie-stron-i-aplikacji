@@ -12,7 +12,7 @@
     <table>
         <?php for ($i; $i <= 31; $i++) { ?>
             
-        } 
+       <?php } ?>
     </table>
 </body>
 
