@@ -1,0 +1,53 @@
+array_fill()- $a = array_fill(5, 6, 'banana');
+print_r($a); wypisuje 6 liczb zaczynając od 5, każda liczba stoi obok napisu banana
+
+array_key_exists() sprawdza czy klucz istnieje w tablicy
+
+array_keys() wypisuje klucze tabeli
+
+array_pop() wypisuje ostatnie wartości tabeli
+
+array_push() dodaje elementy na koniec tabeli- 
+<?php
+$stack = array("orange", "banana");
+array_push($stack, "apple", "raspberry");
+print_r($stack);
+?>
+
+array_reverse() wywala tablice od końca?
+
+array_search() szuka tablice w poszuliwaniu danej wartości
+
+array_slice()wyświetla tablice z podanymi parametrami
+
+array_unique() usuwa duplikaty z tablicy /i tworzy nową tablice/
+
+array_values()wyświetla wszystkie wartości tabeli /bez kluczy 
+
+count() liczy wszystkie elementy tabeli
+
+explode() 
+
+in_array() sprawdza czy wartosć jest w tabeli- 
+$os = array("Mac", "NT", "Irix", "Linux");
+if (in_array("Irix", $os)) {
+    echo "Got Irix";
+}
+
+is_array() sprawdza czy zmienna jest tablicą?
+
+range() tworzy tabele z podanymi parametrami-
+echo implode(', ', range(0, 100, 10)), PHP_EOL; - tablica od 0 do 100 co 10.
+
+list() Przypisz zmienne tak, jakby były tablicą ?
+
+shuffle() miesza tablice
+
+sort() sortuje tablice w kolejności rosnącej
+
+rsort() sortuje tablice w kolejności malejącej
+
+asort() 
+ksort() 
+arsort()
+krsort() 
