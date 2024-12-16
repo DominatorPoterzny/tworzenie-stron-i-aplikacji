@@ -1,28 +1,51 @@
 fieldset {
-	border: 2px blue solid;
+	border: 2px cornflowerblue solid;
 	border-radius: 20px;
-	padding: 15px;
+	padding: 40px;
+	width: 600px;
+	margin-bottom: 5px;
 }
+
 legend {
-	color: blue;
+	color: cornflowerblue;
 	text-align: center;
+	font-size: 25px;
 }
-input,
-select {
-	border: 2px orange solid;
+input {
+	border: 2px orangered solid;
 	width: 100%;
-	padding: 5px;
-    border-radius: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 15px;
+}
+#doctor {
+	border: 2px cornflowerblue solid;
+	text-shadow: 2px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 15px;
 }
 #button {
-	background-color: blue;
+	background-color: cornflowerblue;
 	border: 0px;
 	color: white;
-    padding: 10px;
+	padding: 10px;
+	width: 700px;
 }
 body {
 	font-size: 15px;
+	width: 70%;
+	margin-left: 20%;
+	margin-right: 10%;
+	padding: 15px;
+	align-items: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #com {
 	width: 100%;
+}
+label {
+	font-size: 17px;
+	padding: 10px;
 }
