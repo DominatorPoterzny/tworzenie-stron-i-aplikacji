@@ -51,3 +51,17 @@ asort()
 ksort() 
 arsort()
 krsort() 
+
+
+
+
+
+$_COOKIE — HTTP Cookies Tablica asocjacyjna zmiennych przekazywana do bieżącego skryptu za pomocą plików cookie HTTP.
+
+$_GET — zmienne HTTP GET Tablica asocjacyjna zmiennych przekazywana do bieżącego skryptu za pośrednictwem parametrów URL (znanych również jako ciąg zapytania). Należy zauważyć, że tablica nie jest wypełniana tylko dla żądań GET, ale raczej dla wszystkich żądań z ciągiem zapytania.
+
+$_POST--Tablica asocjacyjna zmiennych przekazywana do bieżącego skryptu za pomocą metody HTTP POST podczas używania application/x-www-form-urlencoded lub multipart/form-datajako typu zawartości HTTP w żądaniu.
+
+$SERVER - to tablica zawierająca informacje takie jak nagłówki, ścieżki i lokalizacje skryptów. Wpisy w tej tablicy są tworzone przez serwer WWW, dlatego nie ma gwarancji, że każdy serwer WWW zapewni którykolwiek z nich; serwery mogą pominąć niektóre lub zapewnić inne, które nie są tutaj wymienione. Jednak większość tych zmiennych jest uwzględniona w specyfikacji » CGI/1.1 i prawdopodobnie zostaną zdefiniowane.
+
+$_SESSION-ablica asocjacyjna zawierająca zmienne sesji dostępne dla bieżącego skryptu.
