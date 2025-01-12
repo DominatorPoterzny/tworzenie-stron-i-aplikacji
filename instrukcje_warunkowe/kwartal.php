@@ -43,7 +43,7 @@
         echo "IV kwartał";
         break;
     default:
-        echo "Błędny nuwer miesiąca";
+        echo "Błędny numer miesiąca";
    }?></h3>
 </body>
 </html>
