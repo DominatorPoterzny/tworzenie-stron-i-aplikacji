@@ -9,15 +9,15 @@
 
 <body>
 
-    <?php $a = range('a', 'z') ?>
+    <?php $litery = range('a', 'z') ?>
     <fieldset>
         <legend>Alfabet</legend>
 
         <form action="">
-            <?php foreach ($a as $r) { ?>
+            <?php foreach ($litery as $r) { ?>
 
-                <input type="checkbox" name="$r[]" id="$r">
-                <label for="$r"> <?= $r ?> </label>
+                <input type="checkbox" name="<?= $r ?> []" id="<?= $r ?>">
+                <label for="<?= $r ?>"> <?= $r ?> </label>
 
 
 
