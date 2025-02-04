@@ -36,7 +36,7 @@
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 foreach ($litery as $r) {
                     if (isset($_POST[$r])) {
-                        echo 
+                        echo ('wybrane litery');
                     }
                 }
             } 
