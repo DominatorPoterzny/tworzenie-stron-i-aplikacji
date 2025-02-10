@@ -34,12 +34,30 @@
             <input type="submit" value="Wybierz">
             <?php
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                foreach ($litery as $r) {
-                    if (isset($_POST[$r])) {
-                        echo 
-                    }
-                }
-            } 
+                //echo ('Te litery zostały wybrane:');
+                //foreach ($litery as $r) {;
+                    //if (isset($_POST[$r])) {
+                     //   echo ($r) . (',');
+                     if(!empty($_POST[$r])){
+
+                        if(count($_POST) === 1){;
+                            echo('Te litery zostały wybrane:');
+                        }
+                        else{
+                            echo('Ta litera została wybrana:');
+                        }
+                     }
+                     
+                
+
+                    } else {
+                echo ('Żadna litera nie została wybrana');
+            }
+            //echo (implode(',', $litery));
+                    
+                //}
+            
+            
             ?>
         </form>
     </fieldset>
