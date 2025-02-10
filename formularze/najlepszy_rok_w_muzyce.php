@@ -15,7 +15,7 @@
             <select name="rok" id="rok">
                 <option selected value="1">1</option>
                 <?php foreach($data as $a){ ?>
-                    <option value=" <?php $a ?> "> <?php $a ?> </option>
+                    <option value=" <?php $a; ?> "> <?php $a; ?> </option>
                 <?php } ?>
             </select>
             <br>
