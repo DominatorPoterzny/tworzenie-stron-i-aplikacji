@@ -8,12 +8,13 @@
 </head>
 
 <body>
+    <?php $data = range(1500, 2020) ?>
     <fieldset><legend>Najlepszy rok w muzyce</legend>
         <form action="" method="post">
             <label for="rok">Wybierz najlepszy rok w muzyce:</label>
             <select name="rok" id="rok">
                 <option selected value="1">1</option>
-                <?php foreach(range(1500, 2020) as $a){ ?>
+                <?php foreach($data as $a){ ?>
                     <option value=" <?php $a ?> "> <?php $a ?> </option>
                 <?php } ?>
             </select>
