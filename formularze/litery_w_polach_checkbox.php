@@ -7,15 +7,23 @@
     <title>Document</title>
 </head>
 <style>
-    label{
+    label {
         padding-right: 15px;
     }
-    fieldset{
+
+    fieldset {
         border-color: blue;
         border-width: 2px;
-       
+
     }
 </style>
+<!-- if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+foreach ($litery as $r) {
+if (isset($_POST[$r])) {
+echo "wybrane litery:";
+}
+}
+} -->
 
 <body>
 
@@ -33,13 +41,9 @@
             <br>
             <input type="submit" value="Wybierz">
             <?php
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                foreach ($litery as $r) {
-                    if (isset($_POST[$r])) {
-                        echo 
-                    }
-                }
-            } 
+            if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+                
+            }
             ?>
         </form>
     </fieldset>
