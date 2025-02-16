@@ -27,24 +27,39 @@ echo "wybrane litery:";
 
 <body>
 
-    <?php $litery = range('a', 'z') ?>
-    <fieldset>
+   
+
+
+
+
+
+    <fieldset style="border: solid, 2px, blue">
         <legend>Alfabet</legend>
-
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <?php foreach ($litery as $r) { ?>
-
-                <input type="checkbox" name="<?= $r ?>[]" id="<?= $r ?>">
-                <label for="<?= $r ?>"> <?= $r ?> </label>
-
-            <?php } ?>
-            <br>
-            <input type="submit" value="Wybierz">
+        <form action="" method="POST">
             <?php
-            if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-                
-            }
+            foreach (range('a', 'z') as $litera) {
+                if (!empty($_POST) && in_array($litera, $_POST)) {
+                    $zaznaczona = 'checked';
+                } else {
+                    $zaznaczona = '';
+                }
             ?>
+                <input <?= $zaznaczona ?> type="checkbox" name="litera_<?= $litera ?>" id="litera_<?= $litera ?>" value="<?= $litera ?>">
+                <label for="litera_<?= $litera ?>" style="padding-right: 15px"><?= $litera ?></label>
+            <?php }
+            ?>
+            <br> <input type="submit" value="Wybierz">
+            <?php
+            if (!empty($_POST)) {
+                if (count($_POST) == 1) {
+            ?> <p>Ta litera została wybrana: <?= implode('', $_POST) ?></p> <?php
+            } elseif (!empty($_POST)) {
+               ?> <p>Te litery zostały wybrane: <?= implode(', ', $_POST) ?></p> <?php
+             } else {
+                 ?> <p>Żadna litera nie została wybrana</p> <?php
+             }
+         }
+        ?>
         </form>
     </fieldset>
 </body>
