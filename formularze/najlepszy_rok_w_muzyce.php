@@ -6,22 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    legend {
+        border-left: limegreen solid 2px;
+        border-right: limegreen solid 2px;
+    }
+
+    fieldset {
+       border: limegreen solid 2px;
+
+    }
+</style>
 
 <body>
-    <?php $data = range(1500, 2020) ?>
-    <fieldset><legend>Najlepszy rok w muzyce</legend>
-        <form action="" method="post">
-            <label for="rok">Wybierz najlepszy rok w muzyce:</label>
-            <select name="rok" id="rok">
-                <option selected value="1">1</option>
-                <?php foreach($data as $a){ ?>
-                    <option value=" <?php $a; ?> "> <?php $a; ?> </option>
+    <form action="" method="post">
+        <?php $data = range(1500, 2020) ?>
+        
+
+            <fieldset>
+                <legend>Najlepszy rok w muzyce</legend>
+
+                <label for="rok">Wybierz najlepszy rok w muzyce:</label>
+                <select name="rok" id="rok" required>
+                    <option value=""></option>
+                    <?php foreach ($data as $a) {
+                        if (!empty($_POST) && in_array($a, $_POST)) {
+                            $zaznaczona = 'selected';
+                        } else {
+                            $zaznaczona = '';
+                        } ?>
+                        <option <?= $zaznaczona ?> value="<?= $a ?> "> <?= $a ?></option>
+                    <?php } ?>
+                </select>
+                <br>
+                <input type="submit" value="Wybierz najlepszy rok w muzyce"><br>
+                
+
+
+                <?php if (!empty($_POST)) { ?>
+                    <p>Według ciebie najlepszym rokiem w muzyce był rok: <?= $_POST['rok'] ?></p>
+
                 <?php } ?>
-            </select>
-            <br>
-            <input type="submit" value="Wybierz najlepszy rok w muzyce">
-        </form>
-    </fieldset>
+
+            </fieldset>
+
+    </form>
 </body>
 
 </html>
