@@ -1,6 +1,8 @@
-<pre>
+<hr>
+<br>
+<pre>TABLICA POST
     <?php print_r($_POST) ?>
 </pre>
-<pre>
+<pre>TABLICA SESSION
     <?php print_r($_SESSION) ?>
 </pre>
