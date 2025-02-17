@@ -12,6 +12,7 @@
 <body>
     <?php include 'menu.php'; ?>
     <?php if ($_SESSION['status_logowania']) {
+        echo '<h1> Strona dla zalogowanych</h1>';
         include 'print_r.php';
     } else {
         echo 'Zaloguj się';
