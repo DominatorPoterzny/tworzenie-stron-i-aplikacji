@@ -6,3 +6,5 @@
 <pre>TABLICA SESSION
     <?php print_r($_SESSION) ?>
 </pre>
+<pre>
+    <?php echo basename($_SERVER["PHP_SELF"]) ?></pre>
