@@ -25,6 +25,7 @@
             $_SESSION['haslo'] = $_POST['haslo'];
             $_SESSION['status_logowania'] = true;
         } else {
+            echo '<br>';
             echo 'Logowanie nieudane';
         } ?>
         <?php include 'print_r.php'; ?>
