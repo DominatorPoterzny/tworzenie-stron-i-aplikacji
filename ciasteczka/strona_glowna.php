@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -11,12 +10,12 @@
 
 <body>
     <?php include 'menu.php'; ?>
-    <?php if ($_SESSION['status_logowania'] == true) {
-        echo '<h1> Strona dla zalogowanych</h1>';
-        include 'print_r.php';
-    } else {
-        echo 'Zaloguj się';
+    <h1>Jakie powinno być dobre hasło?</h1>
+    <?php if ($_SERVER[''] === 'POST') {
     } ?>
+
+    <?php include 'print_r.php'; ?>
+    <?php include 'stopka.php' ?>
 </body>
 
 </html>
