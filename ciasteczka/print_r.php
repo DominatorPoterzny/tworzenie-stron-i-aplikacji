@@ -1,5 +1,5 @@
 <hr>
 <br>
-<pre>TABLICA SESSION
+<pre>TABLICA COOKIE
     <?php print_r($_COOKIE) ?>
 </pre>

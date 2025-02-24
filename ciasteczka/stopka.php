@@ -1,2 +1,2 @@
 <hr>
-<footer>Filip Kołomański 24.02.2025</footer>
+<footer class="stopka">Filip Kołomański 24.02.2025</footer>

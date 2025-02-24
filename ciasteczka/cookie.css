@@ -18,3 +18,12 @@ a {
 h1{
     font-size: 30px;
 }
+.stopka{
+    font-size: 15px;
+    background-color: rgb(115, 208, 211);
+}
+.active{
+    font-size: 30px;
+    color: magenta;
+    
+}
