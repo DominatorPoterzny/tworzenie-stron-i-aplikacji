@@ -1,10 +1,10 @@
 <?php session_start() ?>
 <?php $sukces = false;
-if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['nazwa'];
     $value = $_POST['zawartosc'];
     $expires = $_POST['wygasa'];
-    session_set_cookie_params($name, $value, $expires + time());
+    $sukces = setcookie($name, $value, time() + $expires, '/');
 } ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="cookie.css">
 </head>
 
 <body>
@@ -22,15 +23,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
         <form action="" method="post">
             <label for="Nazwa">Nazwa<sup>*</sup>:</label>
-            <input type="text" name="nazwa" id="nazwa">
+            <input type="text" name="nazwa" id="nazwa" readonly value="good_pass">
             <br>
             <label for="zawartosc">Zawartość:</label>
             <textarea name="zawartosc" id="zawartosc" placeholder="zawartość"></textarea>
             <br>
             <label for="wygasa">Wygasa:</label>
-            <input type="number" name="wygasa" id="wygasa">
-            <p>[w sekundach]</p><br>
-            <input type="reset" value="Odśwież">
+            <input type="number" name="wygasa" id="wygasa" step="60" min="0">
+            [w sekundach]<br>
+            
             <input type="submit" value="Ustaw">
         </form>
 
