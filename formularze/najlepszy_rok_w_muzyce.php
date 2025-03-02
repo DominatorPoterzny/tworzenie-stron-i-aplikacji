@@ -20,7 +20,7 @@
 
 <body>
     <form action="" method="post">
-        <?php $data = range(1500, 2020) ?>
+        
         
 
             <fieldset>
@@ -29,7 +29,7 @@
                 <label for="rok">Wybierz najlepszy rok w muzyce:</label>
                 <select name="rok" id="rok" required>
                     <option value=""></option>
-                    <?php foreach ($data as $a) {
+                    <?php foreach (range(1500, 2020) as $a) {
                         if (!empty($_POST) && in_array($a, $_POST)) {
                             $zaznaczona = 'selected';
                         } else {
