@@ -2,7 +2,7 @@ body {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	background-color: rgb(202, 227, 235);
 }
-a {
+.menu {
 	background-color: rgb(72, 166, 224);
 	text-decoration: none;
 	color: white;
@@ -10,11 +10,18 @@ a {
 	text-align: center;
 	padding: 5px;
 }
+.active {
+	font-size: 30px;
+	color: magenta;
+	font-weight: bold;
+	background-color: darkcyan;
+}
+
 #menu {
 	display: flex;
 	gap: 0.625%;
-    justify-content: center;
+	justify-content: center;
 }
-h1{
-    font-size: 30px;
+h1 {
+	font-size: 30px;
 }
