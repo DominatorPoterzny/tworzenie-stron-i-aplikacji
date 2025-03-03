@@ -19,7 +19,7 @@
     </form>
     <?php if ($_SERVER['REQUEST_METHOD'] === "POST") {
         echo "Tekst z pola trim bez funkcji trim: ";
-        var_dump($_POST["trim"]);
+        var_dump($_POST["trim"]); 
         echo "Tekst z pola trim z funkcją trim: ";
         var_dump(trim($_POST["trim"]));
 
