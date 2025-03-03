@@ -7,14 +7,16 @@
     <title>Document</title>
 </head>
 <style>
-    table{
+    table {
         border-collapse: collapse;
     }
-    td{
+
+    td {
         border: solid 1px lightgray;
         padding: 7px;
     }
 </style>
+
 <body>
 
     <table>
@@ -24,10 +26,12 @@
 
             <tr>
                 <td><label for="uczen<?= $a ?>">Uczeń <?= $a ?></label></td>
-                <td><input type="text" name="uczen" id="uczen"></td>
+                <td><input type="text" name="uczen<?= $a ?>" id="uczen<?= $a ?>"></td>
             </tr>
         <?php  } ?>
-        <tr><td colspan="2" style="text-align: center;"><input type="submit" value="Zapisz"></td></tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><input type="submit" value="Zapisz"></td>
+        </tr>
     </table>
 </body>
 

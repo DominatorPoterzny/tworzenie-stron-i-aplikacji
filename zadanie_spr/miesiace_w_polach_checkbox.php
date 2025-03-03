@@ -7,18 +7,19 @@
     <title>Document</title>
 </head>
 <style>
-    fieldset{
+    fieldset {
         border-width: 3px;
         border-color: pink;
     }
 </style>
+
 <body>
-    
-    
+    <?php $miesiace = array("Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Liepiec", "Sierpień", "Wrzesien", "Październik", "Listopad", "Grudzień") ?>
+
     <form method="post">
         <fieldset>
             <legend>Miesiące</legend>
-            <?php foreach (range("Styczeń", "Grudzień") as $b) {
+            <?php foreach ($miesiace as $b) {
                 if (!empty($_POST) && in_array($b, $_POST)) {
                     $zaznaczona = 'checked';
                 } else {
@@ -34,11 +35,11 @@
             <?php if (!empty($_POST)) {
                 if (count($_POST) == 1) {
             ?> <p>Ten miesiąc został wybrany: <?= implode('', $_POST) ?></p> <?php
-            } elseif (!empty($_POST)) {
-               ?> <p>Te miesiace zostały wybrane: <?= implode(', ', $_POST) ?></p> <?php
-             } else {
-                 ?> <p>Żaden miesiac nie został wybrany</p> <?php
-             } } ?>
+           } elseif (!empty($_POST)) {
+                    ?> <p>Te miesiace zostały wybrane: <?= implode(', ', $_POST) ?></p> <?php
+           } else {  ?> <p>Żaden miesiac nie został wybrany</p> <?php
+            }
+     } ?>
 
         </fieldset>
     </form>
