@@ -20,9 +20,6 @@
 
 <body>
     <form action="" method="post">
-        
-        
-
             <fieldset>
                 <legend>Najlepszy rok w muzyce</legend>
 
@@ -41,8 +38,6 @@
                 <br>
                 <input type="submit" value="Wybierz najlepszy rok w muzyce"><br>
                 
-
-
                 <?php if (!empty($_POST)) { ?>
                     <p>Według ciebie najlepszym rokiem w muzyce był rok: <?= $_POST['rok'] ?></p>
 
