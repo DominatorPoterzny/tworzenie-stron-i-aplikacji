@@ -17,22 +17,22 @@
         <input type="text" name="html" id="html" value="<h1>Kielce</h1>"><br>
         <input type="submit" value="Wyślij">
     </form>
-    <?php if ($_SERVER['REQUEST_METHOD'] === "POST") {
-        echo "Tekst z pola trim bez funkcji trim: ";
-        var_dump($_POST["trim"]); 
-        echo "Tekst z pola trim z funkcją trim: ";
-        var_dump(trim($_POST["trim"]));
+    <?php if ($_SERVER['REQUEST_METHOD'] === "POST") { ?>
+        <?= "Tekst z pola trim bez funkcji trim: "; ?> <br>
+       <?= var_dump($_POST["trim"]); ?> <br>
+       <?= "Tekst z pola trim z funkcją trim: "; ?> <br>
+       <?= var_dump(trim($_POST["trim"])); ?> <br>
 
-        echo "Tekst z pola strip z funkcją stripslashes: ";
-        var_dump($_POST["strip"]);
-        echo "Tekst z pola strip z funkcją stripslashes: ";
-        var_dump(stripslashes($_POST["strip"]));
+       <?= "Tekst z pola strip z funkcją stripslashes: "; ?> <br>
+       <?= var_dump($_POST["strip"]); ?> <br>
+       <?= "Tekst z pola strip z funkcją stripslashes: "; ?> <br>
+       <?= var_dump(stripslashes($_POST["strip"])); ?> <br>
 
-        echo "Tekst z pola html z funkcją htmlspecialchars: ";
-        var_dump($_POST["html"]);
-        echo "Tekst z pola html z funkcją htmlspecialchars: ";
-        var_dump(htmlspecialchars($_POST["html"]));
-    } ?>
+       <?= "Tekst z pola html z funkcją htmlspecialchars: "; ?> <br>
+       <?= var_dump($_POST["html"]); ?> <br>
+       <?= "Tekst z pola html z funkcją htmlspecialchars: "; ?> <br>
+       <?= var_dump(htmlspecialchars($_POST["html"])); ?> <br>
+   <?php } ?>
 </body>
 
 </html>
