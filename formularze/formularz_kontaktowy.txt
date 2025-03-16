@@ -1,0 +1,26 @@
+2025-03-16 21:43:47
+Array
+(
+)
+2025-03-16 21:43:54
+Array
+(
+)
+2025-03-16 21:44:02
+Array
+(
+    [name] => filip d
+    [email] => filip.kolomanski2006@wp.pl
+    [old] => 25-50
+    [text] => dadawdawdawdqaw
+    [zgoda] => on
+)
+2025-03-16 21:46:02
+Array
+(
+    [name] => Filip Kolomanski
+    [email] => twojstary2006@gmail.com
+    [old] => 25-50
+    [text] => dawdawdawdaw
+    [zgoda] => on
+)
