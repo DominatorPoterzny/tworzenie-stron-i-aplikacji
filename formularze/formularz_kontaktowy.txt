@@ -46,3 +46,12 @@ Array
     [text] => fvsdafSfSFGsef
     [zgoda] => on
 )
+2025-03-17 8:36:09
+Array
+(
+    [name] => dasd dasd
+    [email] => we@ewe.pl
+    [old] => 25-50
+    [text] => dasdadasdasdasdas
+    [zgoda] => on
+)
