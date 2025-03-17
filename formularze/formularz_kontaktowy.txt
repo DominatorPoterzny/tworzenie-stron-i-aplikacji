@@ -24,3 +24,25 @@ Array
     [text] => dawdawdawdaw
     [zgoda] => on
 )
+2025-03-17 8:22:08
+Array
+(
+)
+2025-03-17 8:22:33
+Array
+(
+    [name] => dasd dasd
+    [email] => we@ewe.pl
+    [old] => 25
+    [text] => gegESGESWGEGewsg
+    [zgoda] => on
+)
+2025-03-17 8:35:34
+Array
+(
+    [name] => dasd dasd
+    [email] => we@ewe.pl
+    [old] => 25
+    [text] => fvsdafSfSFGsef
+    [zgoda] => on
+)
