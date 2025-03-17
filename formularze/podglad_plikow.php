@@ -8,16 +8,21 @@
 </head>
 
 <body>
-    <?php ?>
+    <?php $directory = 'file/' ?>
+    <?php $plik = 'cos.txt' ?>
     <fieldset>
-        <div>Pliki w katalogu</div><?php $file = scandir("file") ?>
+        <div>Pliki w katalogu</div> <?= $directory ?><?php $file = scandir("file") ?>
         <div>
-            <?php foreach ($file as $key => $value) {
-                if ('.' !== $value && '..' !== $value) {
+            <ol>
+                <?php foreach ($file as $key) {
+                    if ('.' !== $key && '..' !== $key) {
 
-                    echo $value . " " . filesize("file") . "<br>";
-                }
-            } ?></div>
+                        // echo $key . "<br>";
+                        echo"<li>". $key . " " . filesize("$directory$key") . "</li>" . "<br>";
+                    }
+                } ?>
+            </ol>
+        </div>
 
         <!-- <?php print_r($file) ?> -->
     </fieldset>
