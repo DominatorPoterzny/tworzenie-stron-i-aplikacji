@@ -15,12 +15,12 @@
         <div>
             <ol>
                 <?php foreach ($file as $key) {
-                    if ('.' !== $key && '..' !== $key) {
+                    if ('.' !== $key && '..' !== $key) { ?>
 
-                        // echo $key . "<br>";
-                        echo"<li>". $key . " " . filesize("$directory$key") . "</li>" . "<br>";
-                    }
-                } ?>
+                        <!-- // echo $key . "<br>"; -->
+                        <li> <a href="podglad_plikow_2.php"> <?= $key ?> </a> <?= filesize("$directory$key") ?> </li>  <br>
+                     <?php } ?>
+                 <?php } ?>
             </ol>
         </div>
 
