@@ -11,16 +11,16 @@
     <?php $directory = 'file/' ?>
     <?php $plik = 'cos.txt' ?>
     <fieldset>
-        <div>Pliki w katalogu</div> <?= $directory ?><?php $file = scandir("file") ?>
+        <div>Pliki w katalogu <?= $directory ?></div> <?php $file = scandir("file") ?>
         <div>
             <ol>
                 <?php foreach ($file as $key) {
                     if ('.' !== $key && '..' !== $key) { ?>
 
                         <!-- // echo $key . "<br>"; -->
-                        <li> <a href="podglad_plikow_2.php"> <?= $key ?> </a> <?= filesize("$directory$key") ?> </li>  <br>
-                     <?php } ?>
-                 <?php } ?>
+                        <li> <a href="podglad_plikow_2.php?name=<?= $key ?>"> <?= $key ?> </a> <?= filesize("$directory$key") ?> </li> <br>
+                    <?php } ?>
+                <?php } ?>
             </ol>
         </div>
 

@@ -6,15 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p>dupa</p>
+    <?php print_r($_GET) ?>
     <?php $directory = 'file/' ?>
     <?php $plik = 'cos.txt' ?>
     </fieldset>
-    <?php if (isset($_GET['plik'])) { ?>
+    <?php if (isset($_GET['name'])) { ?>
         <fieldset>
             <div>Podgląd pliku</div>
             <div>
-                <?php $plik = $_GET['plik'] ?>
+                <?php $plik = $_GET['name'] ?>
                 <?php $file = file_get_contents("file/$plik") ?>
                 <?= $file ?>
             </div>
