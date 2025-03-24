@@ -39,7 +39,7 @@ if (!isset($_SESSION['question_index'])) {
 
 
         <?php if (isset($_POST['check'])) {
-                if ($_POST['odp'] = $questions['0']['1']);
+                if ($_POST['odp'] == $questions['0']['1']);
                 print_r($_POST['odp']);
                 print_r($questions['0']['0']);
                 print_r($questions['0']['1']);
@@ -55,7 +55,7 @@ if (!isset($_SESSION['question_index'])) {
         if (isset($_POST['next']) || $_SESSION['question_index'] == 0) { ?>
             <?php print_r($questions['0']['0']) ?>
             <input type="text" name="odp" id="odp">
-            <input type="submit" value="zjedz">
+            <input type="submit" value="zjedz" name="check">
             <!-- // wyświetlamy input do udzielenia odpowiedzi
             // wyświetlamy przycisk Sprawdź -->
         <?php } ?>
