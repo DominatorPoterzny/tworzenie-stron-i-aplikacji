@@ -29,5 +29,6 @@ gdy odpowiemy na ostatnie pytanie:
 if ($_SESSION['question_index'] >= $totalQuestions) {
   // usuń zmienne sesji
   // wyświetl podsumowanie całego quizu 
+
 }
 

@@ -1,11 +1,10 @@
 <?php session_start() ?>
-<?php
-if (!isset($_SESSION['question_index'])) {
-    $_SESSION['question_index'] = 0;
-    $_SESSION['score'] = 0;
-};
-
-?>
+<?php $questions = [
+    0 => ["Stolica Włoch to:", "Rzym"],
+    1 => ["Ile wynosi 8 + 12?", "20"],
+    2 => ["Największa planeta w Układzie Słonecznym to:", "Jowisz"],
+    3 => ["Który kontynent jest najmniejszy?", "Australia"]
+]; ?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -16,57 +15,66 @@ if (!isset($_SESSION['question_index'])) {
 </head>
 
 <body>
-
-    <?php
-
-    $questions = [
-        0 => ["Stolica Włoch to:", "Rzym"],
-        1 => ["Ile wynosi 8 + 12?", "20"],
-        2 => ["Największa planeta w Układzie Słonecznym to:", "Jowisz"],
-        3 => ["Który kontynent jest najmniejszy?", "Australia"]
-    ];
-    $totalQuestions = count($questions);
-    ?>
-    <!-- to robimy tylko raz, po rozpoczęciu sesji: -->
+    <?php if (!isset($_SESSION['pytanie'])) {
+        $_SESSION['pytanie'] = 0;
+        $_SESSION['wynik'] = 0;
+    };
+    $totalQuestions = count($questions) ?>
 
 
-    <!-- // formularz: -->
+
     <form method="POST">
-        <div>
-            <h1>Quiz o wszystkim</h1>
-            <p>Pytanie <?= $_SESSION['question_index'] ?>/4</p>
-        </div>
+        <!-- // wyświetl numer pytania -->
+        <p>Pytanie <?= $_SESSION['pytanie'] + 1 ?>/<?= $totalQuestions ?> </p>
+        <!-- // wyświetl treść pytania -->
+        <label><?= $questions[$_SESSION['pytanie']]['0'] ?></label>
 
+        <?php if (isset($_POST['next']) || $_SESSION['pytanie'] == 0) {
+            // wyświetlamy input do udzielenia odpowiedzi
+        ?>
+            <input type="text" name="pytanie" id="<?= $_SESSION['pytanie'] ?>">
+            <!-- // wyświetlamy przycisk Sprawdź -->
+            <input type="submit" value="Sprawdź" name="check">
+        <?php } ?>
 
         <?php if (isset($_POST['check'])) {
-                if ($_POST['odp'] == $questions['0']['1']);
-                print_r($_POST['odp']);
-                print_r($questions['0']['0']);
-                print_r($questions['0']['1']);
             // sprawdzamy odpowiedź
+            if ($_POST['pytanie'] == $questions[$_SESSION['pytanie']]['1']) { ?>
+                <p>Twoja odpowiedź: <?php print_r($_POST['pytanie']) ?> </p>
+                <p>Poprawna odpowiedź:<?php print_r($questions[$_SESSION['pytanie']]['1']) ?> </p>
+                <?php $_SESSION['wynik']++ ?>
+                <p>Wszystkie punkty:<?php print_r($_SESSION['wynik']) ?> </p>
+                <?php
+                $_SESSION['pytanie']++; ?>
+
+            <?php  } else { ?>
+                <p>Twoja odpowiedź: <?php print_r($_POST['pytanie']) ?> </p>
+                <p>Poprawna odpowiedź:<?php print_r($questions[$_SESSION['pytanie']]['1']) ?> </p>
+                <p>Wszystkie punkty:<?php print_r($_SESSION['wynik']) ?> </p>
+            <?php $_SESSION['pytanie']++;
+            }
             // wyświetlamy podsumowanie danego pytania
             // i dotychczas zdobyte punkty
             // zwiększamy numer pytania o jeden
-            if ($_SESSION['question_index'] < $totalQuestions) {
-                // wyświetlamy przycisk "Następne" przenoszący nas do kolejnego pytania
-            }
+            ?>
+            <!-- <p>Twoja odpowiedź: <?php print_r($_POST[$_SESSION['pytanie']]) ?> </p>
+            <p>Poprawna odpowiedź:<?php print_r($questions[$_SESSION['pytanie']]['1']) ?> </p>
+            <p>Wszystkie punkty:<?php print_r($_SESSION['wynik']) ?> </p> -->
+
+            <?php if ($_SESSION['pytanie'] < $totalQuestions) { ?>
+                <!-- // wyświetlamy przycisk "Następne" przenoszący nas do kolejnego pytania -->
+                <input type="submit" value="Następne" name="next">
+        <?php        }
         } ?>
-        <?php
-        if (isset($_POST['next']) || $_SESSION['question_index'] == 0) { ?>
-            <?php print_r($questions['0']['0']) ?>
-            <input type="text" name="odp" id="odp">
-            <input type="submit" value="zjedz" name="check">
-            <!-- // wyświetlamy input do udzielenia odpowiedzi
-            // wyświetlamy przycisk Sprawdź -->
-        <?php } ?>
     </form>
-    <?php
-    // gdy odpowiemy na ostatnie pytanie:
-    if ($_SESSION['question_index'] >= $totalQuestions) {
+
+
+    <?php if ($_SESSION['pytanie'] >= $totalQuestions) {
         // usuń zmienne sesji
-        // wyświetl podsumowanie całego quizu
-    }
-    ?>
+        session_destroy(); ?>
+        <!-- // wyświetl podsumowanie całego quizu -->
+        <a href="/formularze2/quiz.php">Rozpocznij ponownie</a>
+    <?php } ?>
 
 
 </body>
