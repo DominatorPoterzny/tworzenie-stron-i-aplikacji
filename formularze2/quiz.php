@@ -44,6 +44,7 @@
 
 
 
+
     <form method="POST">
         <div class="question">
             <h1>Quiz o wszystkim</h1>
@@ -68,32 +69,31 @@
                     <p>Poprawna odpowiedź:<?php print_r($questions[$_SESSION['pytanie']]['1']) ?> </p>
                     <?php $_SESSION['wynik']++ ?>
                     <p>Wszystkie punkty:<?php print_r($_SESSION['wynik']) ?> </p>
-                </div>
-                <?php
-                $_SESSION['pytanie']++; ?>
+                    <?php
+                    $_SESSION['pytanie']++; ?>
 
-            <?php  } else { ?>
-                <div class="question">
-                    <p>Twoja odpowiedź: <?php print_r($_POST['pytanie']) ?> </p>
-                    <p>Poprawna odpowiedź:<?php print_r($questions[$_SESSION['pytanie']]['1']) ?> </p>
-                    <p>Wszystkie punkty:<?php print_r($_SESSION['wynik']) ?> </p>
+                <?php  } else { ?>
+                    <div class="question">
+                        <p>Twoja odpowiedź: <?php print_r($_POST['pytanie']) ?> </p>
+                        <p>Poprawna odpowiedź:<?php print_r($questions[$_SESSION['pytanie']]['1']) ?> </p>
+                        <p>Wszystkie punkty:<?php print_r($_SESSION['wynik']) ?> </p>
 
-                <?php $_SESSION['pytanie']++;
-            }
-            // wyświetlamy podsumowanie danego pytania
-            // i dotychczas zdobyte punkty
-            // zwiększamy numer pytania o jeden
-                ?>
-                <!-- <p>Twoja odpowiedź: <?php print_r($_POST[$_SESSION['pytanie']]) ?> </p>
+                    <?php $_SESSION['pytanie']++;
+                }
+                // wyświetlamy podsumowanie danego pytania
+                // i dotychczas zdobyte punkty
+                // zwiększamy numer pytania o jeden
+                    ?>
+                    <!-- <p>Twoja odpowiedź: <?php print_r($_POST[$_SESSION['pytanie']]) ?> </p>
             <p>Poprawna odpowiedź:<?php print_r($questions[$_SESSION['pytanie']]['1']) ?> </p>
             <p>Wszystkie punkty:<?php print_r($_SESSION['wynik']) ?> </p> -->
 
-                <?php if ($_SESSION['pytanie'] < $totalQuestions) { ?>
-                    <!-- // wyświetlamy przycisk "Następne" przenoszący nas do kolejnego pytania -->
-                    <input type="submit" value="Następne" name="next">
-            <?php        }
-            } ?>
-                </div>
+                    <?php if ($_SESSION['pytanie'] < $totalQuestions) { ?>
+                        <!-- // wyświetlamy przycisk "Następne" przenoszący nas do kolejnego pytania -->
+                        <input type="submit" value="Następne" name="next">
+                <?php        }
+                } ?>
+                    </div>
     </form>
 
     <div class="summary">
