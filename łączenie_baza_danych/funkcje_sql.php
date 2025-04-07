@@ -19,6 +19,7 @@
             <?php } ?>
         <?php } ?>
     </ul>
+    <?php mysqli_close($con); ?>
 </body>
 
 </html>
