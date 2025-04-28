@@ -1,1 +1,1 @@
-<h1>SIEm</h1>
+<h1>Strona główna</h1>

@@ -10,17 +10,13 @@
             box-sizing: border-box;
         }
 
-        /* Create two unequal columns that floats next to each other */
         .column {
             float: left;
             padding: 10px;
-            height: 150px;
-            /* Should be removed. Only for demonstration */
         }
 
         .left {
             width: 25%;
-            height: 150%;
         }
 
         .right {
@@ -45,16 +41,28 @@
             padding: 5px;
         }
 
-        .link:hover {
+        a:hover {
             background-color: lightpink;
+            width: 100%;
         }
 
         a {
             text-decoration: none;
+            padding: 10px;
         }
 
         .active {
             background-color: lightblue;
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
         }
     </style>
 </head>
@@ -63,21 +71,21 @@
 <body>
     <div class="row">
         <div class="column left" style="background-color:green;">
-            <h2>Column 1</h2>
+            
 
             <div class="contener1">
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == 'glowny' ? 'active' : '' ?>" href="?podstrona=glowny">Strona główna</a> </div>
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == 'czytelnicy' ? 'active' : '' ?>" href="?podstrona=czytelnicy">Tabela czytelnicy</a> </div>
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == 'dzialy' ? 'active' : '' ?>" href="?podstrona=dzialy">Tabela dzialy</a> </div>
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == 'ksiazki' ? 'active' : '' ?>" href="?podstrona=ksiazki">Tabela ksiazki</a> </div>
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == 'pracownicy' ? 'active' : '' ?>" href="?podstrona=pracownicy">Tabela pracownicy</a> </div>
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == 'stanowiska' ? 'active' : '' ?>" href="?podstrona=stanowiska">Tabela stanowiska</a> </div>
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == 'wypozyczenia' ? 'active' : '' ?>" href="?podstrona=wypozyczenia">Tabela wypozyczenia</a> </div>
-                <div class="link"> <a class="<?= ($_GET['podstrona'] ?? '') == '8' ? 'active' : '' ?>" href="?podstrona=8">link 1</a> </div>
+                <a class="<?= ($_GET['podstrona'] ?? '') == 'glowny' ? 'active' : '' ?>" href="?podstrona=glowny">Strona <i>główna</i></a>
+                <a class="<?= ($_GET['podstrona'] ?? '') == 'czytelnicy' ? 'active' : '' ?>" href="?podstrona=czytelnicy">Tabela <i>czytelnicy</i></a>
+                <a class="<?= ($_GET['podstrona'] ?? '') == 'dzialy' ? 'active' : '' ?>" href="?podstrona=dzialy">Tabela <i>dzialy</i></a>
+                <a class="<?= ($_GET['podstrona'] ?? '') == 'ksiazki' ? 'active' : '' ?>" href="?podstrona=ksiazki">Tabela <i>ksiazki</i></a>
+                <a class="<?= ($_GET['podstrona'] ?? '') == 'pracownicy' ? 'active' : '' ?>" href="?podstrona=pracownicy">Tabela <i>pracownicy</i></a>
+                <a class="<?= ($_GET['podstrona'] ?? '') == 'stanowiska' ? 'active' : '' ?>" href="?podstrona=stanowiska">Tabela <i>stanowiska</i></a>
+                <a class="<?= ($_GET['podstrona'] ?? '') == 'wypozyczenia' ? 'active' : '' ?>" href="?podstrona=wypozyczenia">Tabela <i>wypozyczenia</i></a>
+                <a class="<?= ($_GET['podstrona'] ?? '') == '8' ? 'active' : '' ?>" href="?podstrona=8">link 1</a>
             </div>
         </div>
         <div class="column right" style="background-color:lightgreen;">
-            <h2>Column 2</h2>
+            
             <?php
             if (isset($_GET['podstrona'])) {
                 if (file_exists('podstrona/' . $_GET['podstrona'] . '.php')) {
