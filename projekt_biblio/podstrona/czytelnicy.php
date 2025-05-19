@@ -1,6 +1,6 @@
 <h1>Tabela czytelnicy</h1>
-<?php $result=$querry = mysqli_query($con, 'SELECT * FROM czytelnicy')  ?>
-<p>Zawiera <?= mysqli_num_rows($result) ?>  wierszy</p>
+<?php $result = $querry = mysqli_query($con, 'SELECT * FROM czytelnicy')  ?>
+<p>Zawiera <?= mysqli_num_rows($result) ?> wierszy</p>
 <table>
     <tr>
         <th>Nr_czytelnika</th>
@@ -17,7 +17,7 @@
         <th>Plec</th>
     </tr>
     <?php if (mysqli_num_rows($querry) > 0) {
-        while ($row = mysqli_fetch_assoc($querry)) { ?>
+        while ($row = mysqli_fetch_assoc($querry)) {; ?>
             <tr>
                 <td><?= $row['Nr_czytelnika'] ?></td>
                 <td><?= $row['Nazwisko'] ?></td>
@@ -30,10 +30,10 @@
                 <td><?= $row['Data_skreslenia'] ?></td>
                 <td><?= $row['Nr_legitymacji'] ?></td>
                 <td><?= $row['Funkcja'] ?></td>
-                <td><?= $row['Plec'] ?></td>
-
+                <td> <?php if ($row['Plec'] == 'K') {echo "Kobieta";} else {echo "Mężczyzna";}  ?></td>
 
             </tr>
         <?php } ?>
     <?php } ?>
+
 </table>
