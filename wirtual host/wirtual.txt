@@ -1,8 +1,8 @@
 <VirtualHost *> 
-	DocumentRoot "C:\Users\ct21kolomanskif\tworzenie-stron-i-aplikacji"
-        Alias /github "C:\Users\ct21kolomanskif\tworzenie-stron-i-aplikacji"
+	DocumentRoot "C:\Users\ct21kolomanskif\Documents\tworzenie-stron-i-aplikacji"
+        Alias /github "C:\Users\ct21kolomanskif\Documents\tworzenie-stron-i-aplikacji"
     
-	<Directory "C:\Users\ct21kolomanskif\tworzenie-stron-i-aplikacji">
+	<Directory "C:\Users\ct21kolomanskif\Documents\tworzenie-stron-i-aplikacji">
         Options Indexes FollowSymLinks MultiViews
         Require all granted
         AllowOverride None
