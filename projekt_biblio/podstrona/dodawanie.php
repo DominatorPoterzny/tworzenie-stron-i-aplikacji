@@ -2,7 +2,7 @@
 <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nazwa = $_POST['nazwa'];
-    $query = "INSERT INTO `dzialy`(`Nazwa`) VALUES ('$nazwa')";
+    $query = "INSERT INTO `dzialy`(`Nazwa`) VALUES ('$nazwa')";gdrgdrg
 
     // INSERT INTO `dzialy` (`Nazwa`) VALUES ('cois')
     mysqli_query($con, $query);
