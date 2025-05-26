@@ -12,7 +12,7 @@
             <tr>
                 <td><?= $row['Id_dzial'] ?></td>
                 <td><?= $row['Nazwa'] ?></td>
-                <td></td>
+                <td><a href="?podstrona=edycja&Id_dzial=<?= $row['Id_dzial'] ?>">edycja</a></td>
             </tr>
         <?php } ?>
     <?php } ?>

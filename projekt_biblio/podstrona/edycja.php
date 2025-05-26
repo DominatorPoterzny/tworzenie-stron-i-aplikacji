@@ -1,22 +1,19 @@
-<h1>Nowe dane w tabeli dzialy</h1>
+<h1>Edycja wiersza tabeli dzialy</h1>
 <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nazwa = htmlspecialchars(trim($_POST['nazwa']));
-    $query = "INSERT INTO dzialy (`Nazwa`) VALUES ('$nazwa')";
-
-    mysqli_query($con, $query);
+    $id= $_POST['id'];
+    $queryy = "UPDATE dzialy SET Nazwa='$nazwa' WHERE Id_dzial='$id' ";
+    print_r($queryy);
+    mysqli_query($con, $queryy);
 } else { ?>
 
 
-
-
-
-
-    <form action="?podstrona=dodawanie" method="post">
+    <form action="?podstrona=edycja" method="post">
         <table>
             <tr>
                 <td>Id_dzialu</td>
-                <td><input type="text" name="id" id="" disabled></td>
+                <td><input type="text" name="id" id="id"  value="<?=$_GET['Id_dzial']?>"></td>
             </tr>
             <tr>
                 <td>Nazwa</td>
