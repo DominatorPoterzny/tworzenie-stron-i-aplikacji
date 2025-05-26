@@ -1,15 +1,14 @@
 <h1>Nowe dane w tabeli dzialy</h1>
 <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $nazwa = $_POST['nazwa'];
-    $query = "INSERT INTO `dzialy`(`Nazwa`) VALUES ('$nazwa')";gdrgdrg
+    $nazwa = htmlspecialchars(trim($_POST['nazwa']));
+    $query = "INSERT INTO dzialy (`Nazwa`) VALUES ('$nazwa')";
 
-    // INSERT INTO `dzialy` (`Nazwa`) VALUES ('cois')
     mysqli_query($con, $query);
 } else { ?>
 
 
-    <form action="?podstrona=dodawanie.php" method="post">
+    <form action="?podstrona=dodawanie" method="post">
         <table>
             <tr>
                 <td>Id_dzialu</td>
