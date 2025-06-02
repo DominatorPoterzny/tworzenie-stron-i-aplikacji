@@ -24,7 +24,7 @@
                 <td><?= $row['Imie'] ?></td>
                 <td><?= $row['Data_ur'] ?></td>
                 <td><?= $row['Ulica'] ?></td>
-                <td><?= $row['Kod'] ?></td>
+                <td><?php echo substr($row['Kod'], 0 , 2) ?>-<?php echo substr($row['Kod'], 2, 3) ?></td>
                 <td><?= $row['Miasto'] ?></td>
                 <td><?= $row['Data_zapisania'] ?></td>
                 <td><?= $row['Data_skreslenia'] ?></td>

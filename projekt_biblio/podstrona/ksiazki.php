@@ -1,5 +1,5 @@
 <h1>Tabela książki</h1>
-<?php $result=$querry = mysqli_query($con, 'SELECT Sygnatura,Tytul,Nazwisko,Imie,Wydawnictwo,Miejsce_wyd,Rok_wyd,Objetosc_ks,Cena,dzialy.Nazwa FROM `ksiazki` INNER JOIN dzialy ON ksiazki.Id_dzial = dzialy.Id_dzial')  ?>
+<?php $result = $querry = mysqli_query($con, 'SELECT Sygnatura,Tytul,Nazwisko,Imie,Wydawnictwo,Miejsce_wyd,Rok_wyd,Objetosc_ks,Cena,dzialy.Nazwa FROM `ksiazki` INNER JOIN dzialy ON ksiazki.Id_dzial = dzialy.Id_dzial')  ?>
 <p>Zawiera <?= mysqli_num_rows($result) ?> wierszy</p>
 <table>
     <tr>
@@ -25,7 +25,7 @@
                 <td><?= $row['Miejsce_wyd'] ?></td>
                 <td><?= $row['Rok_wyd'] ?></td>
                 <td><?= $row['Objetosc_ks'] ?></td>
-                <td><?= $row['Cena'] ?></td>
+                <td><?= explode('.', $row['Cena'])[0] ?> zł <?= explode('.', $row['Cena'])[1] ?> gr </td>
                 <td><?= $row['Nazwa'] ?></td>
 
             </tr>
