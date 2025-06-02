@@ -7,7 +7,7 @@
     print_r($queryy);
     mysqli_query($con, $queryy);
 } else { ?>
-    
+    <?php $result = $zapytanie = mysqli_query($con, 'SELECT `Id_dzial`=$dzial, `Nazwa`=$nazwa FROM `dzialy` WHERE 1') ?>
     <form action="?podstrona=edycja" method="post">
         <table>
             <tr>
