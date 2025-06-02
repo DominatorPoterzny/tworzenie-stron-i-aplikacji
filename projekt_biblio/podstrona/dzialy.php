@@ -5,14 +5,14 @@
     <tr>
         <th>Id_dzial</th>
         <th>Nazwa</th>
-        <th><a href="?podstrona=dodawanie" style="">X</a></th>
+        <th><a href="?podstrona=dodawanie" class="edycja">X</a></th>
     </tr>
     <?php if (mysqli_num_rows($querry) > 0) {
         while ($row = mysqli_fetch_assoc($querry)) { ?>
             <tr>
                 <td><?= $row['Id_dzial'] ?></td>
                 <td><?= $row['Nazwa'] ?></td>
-                <td><a href="?podstrona=edycja&Id_dzial=<?= $row['Id_dzial'] ?>">edycja</a></td>
+                <td><a href="?podstrona=edycja&Id_dzial=<?= $row['Id_dzial'] ?>" class="edycja">edycja</a></td>
             </tr>
         <?php } ?>
     <?php } ?>
