@@ -92,6 +92,7 @@ a {
 	height: 400px;
 	width: 100%;
 	text-align: center;
+	margin: 20px;
 }
 footer {
 	display: flex;
