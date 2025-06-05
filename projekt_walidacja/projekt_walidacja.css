@@ -1,6 +1,6 @@
 html {
 	scroll-behavior: smooth;
-  }
+}
 body {
 	background-color: #161616;
 	color: #ffffff;
@@ -160,14 +160,14 @@ img {
 	gap: 1.5em;
 	padding: 15px;
 }
-.dostawcy{
+.dostawcy {
 	gap: 0.5em;
 	align-items: stretch;
 	/* min-height: 300px; */
 	display: flex;
 	justify-content: space-around;
 }
-.dostawca{
+.dostawca {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
