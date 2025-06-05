@@ -1,3 +1,6 @@
+html {
+	scroll-behavior: smooth;
+  }
 body {
 	background-color: #161616;
 	color: #ffffff;
@@ -130,15 +133,16 @@ table {
 	padding: 30px 40px 0px 40px;
 }
 td {
-	border-bottom: double 4px rgb(143, 149, 211);
+	border-bottom: double 4px #d4af37;
 	padding: 5px;
 }
 td > p {
 	color: #a6a6a6;
+	font-size: 1.2em;
 }
 td > h3 {
 	color: #d4af37;
-	font-size: 20px;
+	font-size: 1.5em;
 	font-family: 'Libre Bodoni', serif;
 }
 .pusty {
@@ -155,6 +159,26 @@ img {
 	justify-content: center;
 	gap: 1.5em;
 	padding: 15px;
+}
+.dostawcy{
+	gap: 0.5em;
+	align-items: stretch;
+	/* min-height: 300px; */
+	display: flex;
+	justify-content: space-around;
+}
+.dostawca{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	width: calc(100% - 20px);
+	font-size: 1.2em;
+}
+.dostawca > a {
+	padding: 65px 0px 0px 0px;
+	width: 270px;
+	height: 270px;
 }
 #iframe {
 	display: flex;
