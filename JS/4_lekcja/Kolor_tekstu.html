@@ -8,9 +8,10 @@
     <script src="kolor.js"></script>
 </head>
 <style>
-    table{
+    table {
         border-collapse: collapse;
     }
+
     td {
         padding: 30px;
     }
@@ -36,14 +37,14 @@
     <h1 id="h1">Zmień kolor tekstu</h1>
     <table>
         <tr>
-            <td id="gold" onmouseover="document.getElementById('h1').style.color='gold'"
-                onmouseout="document.getElementById('h1').style.color='black'">gold</td>
-            <td id="khaki" onmouseover="document.getElementById('h1').style.color='khaki'"
-                onmouseout="document.getElementById('h1').style.color='black'">khaki</td>
-            <td id="silver" onmouseover="document.getElementById('h1').style.color='silver'"
-                onmouseout="document.getElementById('h1').style.color='black'">silver</td>
-            <td id="peru" onmouseover="document.getElementById('h1').style.color='peru'"
-                onmouseout="document.getElementById('h1').style.color='black'">peru</td>
+            <td id="gold" onmouseover="document.getElementById('h1').style.color='gold'; this.style.color='gold'"
+                onmouseout="document.getElementById('h1').style.color='black'; this.style.color='black'">gold</td>
+            <td id="khaki" onmouseover="document.getElementById('h1').style.color='khaki'; this.style.color='khaki'"
+                onmouseout="document.getElementById('h1').style.color='black'; this.style.color='black'">khaki</td>
+            <td id="silver" onmouseover="document.getElementById('h1').style.color='silver'; this.style.color='silver'"
+                onmouseout="document.getElementById('h1').style.color='black'; this.style.color='black'">silver</td>
+            <td id="peru" onmouseover="document.getElementById('h1').style.color='peru'; this.style.color='peru'"
+                onmouseout="document.getElementById('h1').style.color='black'; this.style.color='black'">peru</td>
         </tr>
     </table>
 </body>
