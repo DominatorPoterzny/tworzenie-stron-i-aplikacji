@@ -1,0 +1,45 @@
+*{
+    font-family: Garamond;
+    color: white;
+}
+header{
+    background-color: indigo;
+    text-align: center;
+    padding: 2px;
+}
+aside{
+    background-color: indigo;
+    height: 600px;
+    
+    float: left;
+    padding: 10px;
+
+}
+.right{
+    width: 20%;
+}
+/* .left{
+    width: 20%;
+} */
+main{
+    background-color: black;
+    height: 600px;
+    scroll-behavior: auto;
+    width: 60%;
+    
+}
+footer{
+    background-color: indigo;
+    height: 150px;
+}
+li{
+    padding: 5px;
+}
+main{
+    text-align: center;
+    padding: 3px;
+}
+input{
+    margin: 10px;
+    color: indigo;
+}
