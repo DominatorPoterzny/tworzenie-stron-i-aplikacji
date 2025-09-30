@@ -9,8 +9,14 @@ document.querySelector('header h1').style.fontFamily='Arial Black';
 document.querySelector('header h1').innerHTML="Preambuła";
 
 
-const teskst2 = document.getElementsByTagName('section');
-console.log(teskst2);
+const teskst2 = document.querySelectorAll('section')
+teskst2.forEach(x => {
+    x.style.border = 'brown 2px solid'
+});
+
+
+
+
 // document.getElementsByTagName('section').style.borderWidth = '2px';
 // document.getElementsByTagName('section').style.borderStyle = 'solid';
 // document.getElementsByTagName('section').style.borderColor = 'brown';
@@ -64,6 +70,6 @@ head.appendChild(p3);
 const sec = document.createElement('section');
 const body = document.querySelector('body');
 sec.style.border = '2px blue dotted';
-sec.style.margin = '10px 20px';
+sec.style.padding = '10px 20px';
 sec.innerHTML = 'Zderzak';
 body.appendChild(sec);
