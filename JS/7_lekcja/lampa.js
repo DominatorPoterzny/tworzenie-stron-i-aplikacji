@@ -5,5 +5,5 @@ const radio2 = document.querySelector('#wylacz')
 
 radio1.addEventListener('change', log)
 function log(a){
-    
+    zarowka.src = './świeczka_zapalona.png'
 }
