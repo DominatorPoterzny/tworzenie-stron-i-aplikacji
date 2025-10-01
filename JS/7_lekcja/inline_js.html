@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div><textarea name="text" id="text" onfocus="this.style.backgroundColor = 'yellow'"></textarea></div>
+    <br>
+    <p><input type="text" name="tekst" id="p" onblur="this.value=this.value.toUpperCase()"></p>
+    <br>
+    <p><select name="select" id="select" onchange="this.style.color = document.querySelector('#select').value">
+            <option value="black">black</option>
+            <option value="blue">blue</option>
+            <option value="burlywood">burlywood</option>
+            <option value="blueviolet">blueviolet</option>
+            <option value="brown">brown</option>
+            <option value="bisque">bisque</option>
+        </select></p>
+    <br>
+    <p onclick="this.style.fontSize = 'xx-large'" ondblclick="this.style.fontSize = 'medium'">DUPA</p>
+    <br>
+    <div><img src="./inline_javascript.png" alt="obrazek" style="height: 300px;width: 300px;"
+            oncontextmenu="alert(this.src)"></div>
+    <br>
+    <div>
+        <input type="text" onkeyup="document.querySelector('#copy').innerHTML=this.value">
+        <p id="copy"></p>
+    </div>
+    <br>
+    <h1 style="color: green;" onmouseover="this.style.textShadow = '2px 2px 5px green'"
+        onmouseout="this.style.textShadow = 'none'">dupa</h1>
+</body>
+
+</html>
