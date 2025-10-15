@@ -5,6 +5,6 @@ guzik.addEventListener('click', () => {
     if(sufit){
         alert(`Twoje niebo ma kolor ${sufit}`)
     }else if(dane === null){
-        alert(`Anlowałeś akcje, a okno promt zwróciło ${sufit}`)
+        alert(`Anulowałeś akcje, a okno promt zwróciło ${sufit}`)
     }
 })
