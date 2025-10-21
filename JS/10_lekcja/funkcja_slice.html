@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p2{
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px red;
+        }
+        #p3{
+            font-size: 30px;
+            font-style: italic;
+            text-shadow: 2px 2px blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Mikołaj Kopernik - polski polihistor pochodzenia niemieckiego</p>
+    <p id="p2"></p>
+    <button id="btn1">Wytnij znaki od 26 do 36</button>
+    <p id="p3"></p>
+    <button id="btn2">Wytnij znaki od końca: od 5 do 12</button>
+</body>
+</html>
+<script>
+    const p1 = document.querySelector('#p1')
+    const p2 = document.querySelector('#p2')
+    const p3 = document.querySelector('#p3')
+    const btn1 = document.querySelector('#btn1')
+    const btn2 = document.querySelector('#btn2')
+
+    btn1.addEventListener('click' , log)
+    function log(a){
+        p2.innerHTML = p1.innerText.slice(26 , 36)
+    }
+    btn2.addEventListener('click', log2)
+    function log2(b) {
+        p3.innerHTML = p1.innerText.slice(-12,-5)
+    }
+</script>

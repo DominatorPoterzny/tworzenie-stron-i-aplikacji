@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">Fryderyk Franciszek Chopin - polski kompozytor i pianista</p>
+    <p><span id="p2"></span></p>
+    <button id="btn1">Wytnij znaki od 9 do 19</button>
+    <p><span id="p3"> </span> </p>
+    <button id="btn2">Wytnij znaki od 27 do końca</button>
+</body>
+<style>
+
+</style>
+
+</html>
+<script>
+    const p1 = document.querySelector('#p1')
+    const p2 = document.querySelector('#p2')
+    const p3 = document.querySelector('#p3')
+    const btn1 = document.querySelector('#btn1')
+    const btn2 = document.querySelector('#btn2')
+
+    btn1.addEventListener('click', log)
+    function log(a) {
+        p2.innerHTML = p1.innerText.substring(9, 19)
+        p2.style.border = '4px crimson dotted'
+        p2.style.padding = '8px'
+    }
+    btn2.addEventListener('click', log2)
+    function log2(b) {
+        p3.innerHTML = p1.innerText.substring(27)
+        p3.style.border = 'double 3px crimson'
+        p3.style.padding = '8px'
+    }
+</script>

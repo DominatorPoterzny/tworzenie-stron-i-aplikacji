@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form action="">
-        <label for="width">Szerokość</label>
-        <input type="number" name="width" id="width" min="0" max="20">
-        <label for="height">Wysokość:</label>
+        <label for="height">Szerokość:</label>
         <input type="number" name="height" id="height" min="0" max="20">
+        <label for="width">Wysokość:</label>
+        <input type="number" name="width" id="width" min="0" max="20">
         <label for="color">Kolor:</label>
         <input type="color" name="color" id="color" value="#ffffff">
         <input type="button" value="Narysuj" id="btn">
@@ -19,26 +21,27 @@
     <p>Obwód prostokąta jest równy <span id="obw"></span> cm</p>
     <p>Pole prostokąta jest równe <span id="pol"></span> cm<sup>2</sup></p>
 </body>
+
 </html>
 <script>
-const div = document.querySelector('#prostokat')
-const wys = document.querySelector('#width')
-const col = document.querySelector('#color')
-const szer = document.querySelector('#height')
-const btn = document.querySelector('#btn')
-const obw = document.querySelector('#obw')
-const pol = document.querySelector('#pol')
+    const div = document.querySelector('#prostokat')
+    const wys = document.querySelector('#width')
+    const col = document.querySelector('#color')
+    const szer = document.querySelector('#height')
+    const btn = document.querySelector('#btn')
+    const obw = document.querySelector('#obw')
+    const pol = document.querySelector('#pol')
 
-btn.addEventListener('click' , log)
-function log(a){
-    div.style.height = wys.value + 'cm'
-    div.style.width = szer.value + 'cm'
-    // console.log(wys)
-    div.style.backgroundColor = col.value
+    btn.addEventListener('click', log)
+    function log(a) {
+        div.style.height = wys.value + 'cm'
+        div.style.width = szer.value + 'cm'
+        // console.log(wys)
+        div.style.backgroundColor = col.value
 
-    obw.innerHTML = szer.value*2+wys.value*2
+        obw.innerHTML = szer.value * 2 + wys.value * 2
 
-    pol.innerHTML = szer.value*wys.value
-}
+        pol.innerHTML = szer.value * wys.value
+    }
 
 </script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Jan Chryzostom Pasek z Gosławic herbu Doliwa</p>
+    <p style="background-color: #ffdfd3; padding: 5px;">Tekst powyżej ma długość <span></span> znaki</p>
+    <button>Policz znaki</button>
+</body>
+</html>
+<script>
+    const p = document.querySelector('#text');
+    const btn = document.querySelector('button');
+    const liczba = document.querySelector('span')
+
+    btn.addEventListener('click' , log)
+    function log(a){
+        // p.lenght = liczba 
+         const pa = p.length
+         console.log(pa)
+        liczba.innerHTML = `${p.innerText.length}`
+
+    }
+
+</script>
