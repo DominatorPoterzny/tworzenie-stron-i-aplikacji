@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">0|1|1|2|3|5|8</p>
+    <button id="btn1">Utwórz tablice liczb i wyświetl ją w konsoli</button> <br>
+    <p id="p2">Jak nazywamy rozgrywane w całości albo we fragmentach danej gry komputerowej z zamiarem jak najszybszego jej ukończenia? Speedrun</p>
+    <button id="btn2">Utwórz tablice wyrazów, ale w konsoli wyświetl tylko 17 pierwszych elementów tablicy</button>
+</body>
+</html>
+<script>
+    const p1 = document.querySelector('#p1')
+    const p2 = document.querySelector('#p2')
+    const btn1 = document.querySelector('#btn1')
+    const btn2 = document.querySelector('#btn2')
+
+    btn1.addEventListener('click', log)
+    function log(a){
+        const table = p1.innerHTML.split("|")
+        console.log(table)
+    }
+
+    btn2.addEventListener('click', log2)
+        function log2(b) {
+            const table = p2.innerHTML.split(" ", 17)
+            console.table(table)
+        }
+
+</script>

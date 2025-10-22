@@ -1,0 +1,9 @@
+
+    Opóźnienie czasu reakcji między czynnością gracza a tym, co dzieje się na ekranie: lag
+    Nagrody zdobywane za aktywność w grze, np. pokonanie wroga lub ukończenie wyzwania: loot
+    Określenie kogoś, komu brakuje doświadczenia: noob
+    Program wspomagający, który umożliwia automatyczne celowanie we wroga i gwarantuje pewne trafienie: aimbot
+    Osoba obsesyjnie oddana jednej grze lub hobby: fanboy
+    Obszar na postaci lub przedmiocie, na który mogą wpływać ataki: hitbox
+    Pozostawanie w jednym miejscu, często w ukryciu, aby urządzić zasadzkę na innych graczy: camping
+    Ożywienie postaci w konkretnym miejscu świata gry po jej śmierci: respawn
