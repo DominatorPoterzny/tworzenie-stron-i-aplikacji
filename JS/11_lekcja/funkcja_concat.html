@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Czuwaj</p>
+    <button id="btn1">Doklej wykrzyknik(!) na końcu tekstu</button>
+</body>
+</html>
+<script>
+    const p1 = document.querySelector("#p1")
+    const tekst = p1.innerHTML
+    const btn1 = document.querySelector("#btn1")
+
+    btn1.addEventListener("click", log)
+    function log(a){
+
+        p1.innerHTML = p1.innerHTML.concat('!')
+    }
+</script>

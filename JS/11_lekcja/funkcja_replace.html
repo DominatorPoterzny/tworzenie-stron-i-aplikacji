@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Microsoft Edge - przeglądarka firmy Microsoft</p>
+    <button id="btn1">Zastąp słowo "Edge" słowem "Janusz Explorer"</button>
+    <button id="btn2">Zastąp każde słowo "Microsoft" słowem "JanuszPol"</button>
+</body>
+</html>
+<script>
+    const p1 = document.querySelector('#p1')
+    const btn1 = document.querySelector('#btn1')
+    const btn2 = document.querySelector('#btn2')
+
+    btn1.addEventListener("click" , log)
+    function log(a){
+        p1.innerText = p1.innerText.replace("Edge","Janusz Explorer")
+    }
+    btn2.addEventListener("click", log2)
+    function log2(b){
+        p1.innerText = p1.innerText.replaceAll("Microsoft", "JanuszPol")
+    }
+</script>

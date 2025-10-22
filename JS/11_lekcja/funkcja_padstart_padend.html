@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">Stefan Banach</p>
+    <button id="btn1">Wypełnij takst na początku podkreśleniami, aby miał długość 20 znaków</button>
+    <button id="btn2">Wypełnij tekst na końcu kropkami, aby miał długość 30 znaków</button>
+</body>
+
+</html>
+<script>
+    const p1 = document.querySelector('#p1')
+    const btn1 = document.querySelector('#btn1')
+    const btn2 = document.querySelector('#btn2')
+
+    btn1.addEventListener("click", log)
+    function log(a) {
+        p1.innerHTML = p1.innerHTML.padStart(20, '_')
+    }
+
+    btn2.addEventListener("click", log2)
+    function log2(b) {
+        p1.innerHTML = p1.innerHTML.padEnd(30, '.')
+    }
+</script>

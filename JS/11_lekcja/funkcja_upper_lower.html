@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">Euklides z Aleksandrii (stgr. Εὐκλείδης) – grecki matematyk</p>
+    <button id="btn1">Zmień wszystkie litery na wielkie</button> <br> <br>
+    <button id="btn2">Zmień wszystkie litery na małe</button> <br> <br>
+    <button id="btn3">Przywróć początkową wielkość znaków</button>
+</body>
+
+</html>
+<script>
+    const p1 = document.querySelector('#p1')
+    const btn1 = document.querySelector('#btn1')
+    const btn2 = document.querySelector('#btn2')
+    const btn3 = document.querySelector('#btn3')
+    const tekst = p1.innerHTML
+    btn1.addEventListener("click", log)
+    function log(a) {
+        p1.innerText = tekst.toUpperCase()
+    }
+
+    btn2.addEventListener("click", log2)
+    function log2(b) {
+        p1.innerText = tekst.toLowerCase()
+    }
+
+    btn3.addEventListener("click", log3)
+    function log3(c) {
+        p1.innerText = tekst
+    }
+</script>
