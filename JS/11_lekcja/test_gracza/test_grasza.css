@@ -22,8 +22,9 @@ a{
     color: dodgerblue;
     margin: 0px 5px 0px 5px;
     text-decoration: none;
+    cursor: pointer;
 }
-span{
+.ukryte{
     font-weight: bold;
     display: none;
 }
