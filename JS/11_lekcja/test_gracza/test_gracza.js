@@ -8,20 +8,29 @@ console.log(odp)
 console.log(pod)
 
 pod.forEach((element, i) => {
-	element.klik = 1;
+	element.klik = 0;
+	console.log(element.klik)
     const gwiazda = '*'.repeat(ukr[i].length)
 	element.addEventListener('click', function () {
+		element.klik++
 		if (element.klik === 1) {
 			element.innerHTML = '&blk34;';
 			pod1[i].innerHTML = `${gwiazda} (${ukr[i].length}) `;
 			element.klik++;
-		} if (element.klik === 2) {
+			console.log(element.klik)
+		}else if (element.klik === 2) {
 			element.innerHTML = '&blk12;';
-			pod1[i].innerHTML = `${gwiazda} (${ukr[i].length}) `;
+			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1)} (${ukr[i].length}) `
 			element.klik++;
+			console.log(element.klik)
+		}else if (element.klik === 3) {
+			element.innerHTML = '&blk14;';
+			pod1[i].innerHTML = `${ukr[i]}${gwiazda.slice(1)} ${gwiazda.slice(-1)}(${ukr[i].length}) `
+			element.klik++;
+			console.log(element.klik)
 		}
         
-	});
+	}); 
 });
 
 odp.forEach((element, i) => {
