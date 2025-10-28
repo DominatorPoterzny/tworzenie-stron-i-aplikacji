@@ -8,30 +8,32 @@ console.log(odp)
 console.log(pod)
 
 pod.forEach((element, i) => {
-	element.klik = 0;
-	console.log(element.klik)
-    const gwiazda = '*'.repeat(ukr[i].length)
+	let klik = 0
+	console.log(klik)
+	const gwiazda = '*'.repeat(ukr[i].length)
+	const srodek = '*'.repeat(ukr[i].length - 2)
 	element.addEventListener('click', function () {
-		element.klik++
-		if (element.klik === 1) {
-			element.innerHTML = '&blk34;';
-			pod1[i].innerHTML = `${gwiazda} (${ukr[i].length}) `;
-			element.klik++;
-			console.log(element.klik)
-		}else if (element.klik === 2) {
-			element.innerHTML = '&blk12;';
-			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1)} (${ukr[i].length}) `
-			element.klik++;
-			console.log(element.klik)
-		}else if (element.klik === 3) {
-			element.innerHTML = '&blk14;';
-			pod1[i].innerHTML = `${ukr[i]}${gwiazda.slice(1)} ${gwiazda.slice(-1)}(${ukr[i].length}) `
-			element.klik++;
-			console.log(element.klik)
+		klik++
+		if (klik === 1) {
+			element.innerHTML = '&blk34;'
+			pod1[i].innerHTML = `${gwiazda} (${ukr[i].length}) `
+			console.log(klik)
+		} else if (klik === 2) {
+			element.innerHTML = '&blk12;'
+			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1)}`
+			console.log(klik)
+		} else if (klik === 3) {
+			element.innerHTML = '&blk14;'
+			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1, -1)}${ukr[i].slice(-1)}`
+			console.log(klik)
+		}else if (klik === 4) {
+			element.style.display = 'none'
+			odp[i].style.display = 'none'
+			pod1[i].innerHTML = `<strong>${ukr[i]}</strong>`
+
 		}
-        
-	}); 
-});
+	})
+})
 
 odp.forEach((element, i) => {
 	element.addEventListener('click', log)
@@ -42,6 +44,10 @@ odp.forEach((element, i) => {
 			odp[i].style.display = 'none'
 			span[i].style.display = 'inline'
 			span[i].style.fontWeight = 'bold'
+			pod[i].style.display = 'none'
+			pod1[i].style.display = 'none'
+		}else if(odpo === null){
+			alert(`Twoja odpowiedz jest PUSTA`)
 		} else {
 			alert(`Twoja odpowiedz jest zła`)
 		}
