@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ukryj1 {
+            user-select: none;
+            filter: blur(5px);
+        }
+
+        .pokaz1 {
+            filter: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Numer telefonu: 12<span class="ukryj1">3</span>-<span class="ukryj1">456</span>-<span class="ukryj1">789</span>
+    </h1>
+    <form action="">
+        <input type="checkbox" name="pokaz" id="btn">
+        <label for="btn">Pokaż cały numer telefonu</label>
+    </form>
+</body>
+
+</html>
+<script>
+    let btn = document.querySelector('#btn')
+    let span = document.querySelectorAll('span')
+
+    btn.addEventListener('click', log)
+    function log(a) {
+        if (btn.checked === true) {
+            span.forEach(element => {
+                element.classList.add('pokaz1')
+
+
+                element.classList.remove('ukryj1')
+
+            });
+        } else {
+            span.forEach(element => {
+                element.classList.remove('pokaz1')
+
+
+                element.classList.add('ukryj1')
+
+            });
+        }
+    }
+
+
+
+</script>

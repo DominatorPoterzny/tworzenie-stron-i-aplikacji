@@ -11,7 +11,6 @@ pod.forEach((element, i) => {
 	let klik = 0
 	console.log(klik)
 	const gwiazda = '*'.repeat(ukr[i].length)
-	const srodek = '*'.repeat(ukr[i].length - 2)
 	element.addEventListener('click', function () {
 		klik++
 		if (klik === 1) {
@@ -20,11 +19,11 @@ pod.forEach((element, i) => {
 			console.log(klik)
 		} else if (klik === 2) {
 			element.innerHTML = '&blk12;'
-			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1)}`
+			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1)} (${ukr[i].length})`
 			console.log(klik)
 		} else if (klik === 3) {
 			element.innerHTML = '&blk14;'
-			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1, -1)}${ukr[i].slice(-1)}`
+			pod1[i].innerHTML = `${ukr[i][0]}${gwiazda.slice(1, -1)}${ukr[i].slice(-1)} (${ukr[i].length})`
 			console.log(klik)
 		}else if (klik === 4) {
 			element.style.display = 'none'
