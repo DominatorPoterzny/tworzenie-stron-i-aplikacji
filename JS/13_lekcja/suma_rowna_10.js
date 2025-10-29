@@ -11,7 +11,7 @@ for (let i = 100; i < 1000; i++) {
 	if (i === 999) {
 		// field.innerHTML += `.`
         field.innerHTML += `${i}`
-        field.appendChild(liczba)
+        // field.appendChild(liczba)
 	} else {
 		field.innerHTML += `, `
 	}
