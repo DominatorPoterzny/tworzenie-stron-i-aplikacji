@@ -22,36 +22,59 @@
         <img src="./zdj/7.jpg" alt="obrazy do sprzedaży" title="7.jpg">
         <img src="./zdj/8.jpg" alt="obrazy do sprzedaży" title="8.jpg">
         <img src="./zdj/9.jpg" alt="obrazy do sprzedaży" title="9.jpg">
-        <img src="./zdj/9.jpg" alt="obrazy do sprzedaży" title="9.jpg">
+        <img src="./zdj/10.jpg" alt="obrazy do sprzedaży" title="10.jpg">
     </section>
     <main>
-        
-            <aside class="lewy">
-                <h3>Zamówienie</h3>
-                <label for="obraz">Wybierz obraz:</label><input type="file" name="obraz" id="obraz"
-                    accept="image/jpeg"><br>
-                <label for="kopie">Liczba Kopii:</label>
-                <input type="number" name="kopie" id="kopie"><br>
-                <input type="radio" name="paper" id=""> <label for="paper">Papier błyszczący</label><br>
-                <input type="radio" name="paper" id="mat"><label for="paper">Papier matowy</label><br>
-                <button>Dodaj do koszyka</button>
+
+        <aside class="lewy">
+            <h3>Zamówienie</h3>
+            <label for="obraz">Wybierz obraz:</label><input type="file" name="obraz" id="obraz" accept="image/jpeg"><br>
+            <label for="kopie">Liczba Kopii:</label>
+            <input type="number" name="kopie" id="kopie"><br>
+            <input type="radio" name="paper" id="bly"> <label for="bly">Papier błyszczący</label><br>
+            <input type="radio" name="paper" id="mat"><label for="mat">Papier matowy</label><br>
+            <button id="btn">Dodaj do koszyka</button>
+        </aside>
+        <div class="kontener2">
+            <nav>
+                <ul>
+                    <li><a href="">Regulamin</a></li>
+                    <li><a href="">Usługi</a></li>
+                    <li><a href="https://pixabay.com">Zdjęcia</a></li>
+                </ul>
+            </nav>
+            <aside class="prawy">
+                <h3>koszyk</h3>
+                <div id="div"></div>
             </aside>
-            <div class="kontener2">
-                <nav>
-                    <ul>
-                        <li><a href="">Regulamin</a></li>
-                        <li><a href="">Usługi</a></li>
-                        <li><a href="">Zdjęcia</a></li>
-                    </ul>
-                </nav>
-                <aside class="prawy">
-                    <h3>koszyk</h3>
-                    <div></div>
-                </aside>
-            </div>
-       
+        </div>
+
     </main>
-    <footer></footer>
+    <footer>Autor strony: <i>Filip</i> </footer>
 </body>
 
 </html>
+<script>
+    let btn = document.querySelector('#btn')
+    let zdj = document.querySelector('#obraz')
+    let kopie = document.querySelector('#kopie')
+    let mat = document.querySelector('#mat')
+    let bly = document.querySelector('#bly')
+    let div = document.querySelector('#div')
+
+    let img = document.createElement('img')
+    let p1 = document.createElement('p')
+    let p2 = document.createElement('p')
+
+    btn.addEventListener('click', log)
+    function log() {
+        if (mat.checked === true) {
+            div.append(p1)
+            p1.innerHTML = `Liczba Kopii:${kopie.value}`
+            
+
+        } else {
+            console.log("dupa")
+        }
+    }
+</script>
