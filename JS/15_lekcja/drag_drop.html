@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1,#div2{
+        border: 2px black solid;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        float: left;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<body>
+    <div id="div1" ondrop="dropHandler(event)" ondragover="dragover(event)"><img id="img1" src="logo.png" alt="logo" draggable="true" ondragstart="dragstart(event)"></div>
+    <div id="div2" ondrop="dropHandler(event)" ondragover="dragover(event)"></div>
+</body>
+</html>
+<script>
+    function dragstart(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function dragover(ev) {
+            ev.preventDefault();
+        }
+
+        function dropHandler(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+</script>

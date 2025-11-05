@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,
+    td {
+        border-collapse: collapse;
+        border: 2px brown solid;
+        border-top: none;
+
+        height: 110px;
+    }
+
+    table {
+        width: 600px;
+    }
+
+    td {
+        width: 110px;
+        text-align: center;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <h2>Skrzynka 1</h2>
+    <table id="tab1">
+        <tr>
+            <td id="td1" ondrop="drop(event)" ondragover="allowdrop(event)"><img id="img1" src="owoc1.png" alt="owoc"
+                    draggable="true" ondragstart="drag(event)"></td>
+            <td id="td2" ondrop="drop(event)" ondragover="allowdrop(event)"><img id="img2" src="owoc2.png" alt="owoc"
+                    draggable="true" ondragstart="drag(event)"></td>
+            <td id="td3" ondrop="drop(event)" ondragover="allowdrop(event)"><img id="img3" src="owoc3.png" alt="owoc"
+                    draggable="true" ondragstart="drag(event)"></td>
+            <td id="td4" ondrop="drop(event)" ondragover="allowdrop(event)"><img id="img4" src="owoc4.png" alt="owoc"
+                    draggable="true" ondragstart="drag(event)"></td>
+        </tr>
+    </table>
+    <h2>Skrzynka 2</h2>
+    <table id="tab2">
+        <tr>
+            <td id="td5" ondrop="drop(event)" ondragover="allowdrop(event)"></td>
+            <td id="td6" ondrop="drop(event)" ondragover="allowdrop(event)"></td>
+            <td id="td7" ondrop="drop(event)" ondragover="allowdrop(event)"></td>
+            <td id="td8" ondrop="drop(event)" ondragover="allowdrop(event)"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function allowdrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        const data = ev.dataTransfer.getData("text");
+        if (ev.target.children.length == 0 && ev.target.tagName == "TD") {
+
+
+
+            ev.target.appendChild(document.getElementById(data));
+        }
+    }
+
+
+</script>
