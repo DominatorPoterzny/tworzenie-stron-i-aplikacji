@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursy komputerowe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><img src="baner.png" alt="kursy komputerowe"></header>
+    <nav>
+        <a href="index.html">Strona główna</a>
+        <a href="raty.html">Koszt rat</a>
+        <a href="https://moje-szkolenia.pl/">Nasz partner</a>
+    </nav>
+    <main>
+        <h3>Oblicz miesięczną ratę</h3>
+        
+            <input class="kontrolki" type="checkbox" name="react" id="react" value="5000">
+            <label for="react">Kurs React.js</label><br>
+
+            <input class="kontrolki" type="checkbox" name="java" id="java" value="3000">
+            <label for="java">Kurs JavaScript</label><br>
+
+            <label for="rata">Liczba rat:</label>
+            <input class="kontrolki" type="number" name="rata" id="rata"><br>
+
+            <select class="kontrolki" name="miasto" id="miasto">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Katowice">Katowice</option>
+                <option value="Gdańsk">Gdańsk</option>
+            </select><br>
+
+            <button class="kontrolki" id="btn">Oblicz</button>
+            <p id="p1"></p>
+        
+    </main>
+    <footer>
+        <p>Autor strony: Potężny Dominator</p>
+    </footer>
+</body>
+
+</html>
+<script src="main.js"></script>

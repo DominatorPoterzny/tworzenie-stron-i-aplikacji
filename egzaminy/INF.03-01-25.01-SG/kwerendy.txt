@@ -1,0 +1,3 @@
+SELECT kolor,material FROM produkt WHERE wysokosc_buta > 10;
+SELECT nazwa,cena,kategorie.nazwa_kat FROM buty INNER JOIN kategorie ON buty.id_kat=kategorie.id_kat;
+CREATE USER "Marek"@"localhost" identified by "M@reK";
