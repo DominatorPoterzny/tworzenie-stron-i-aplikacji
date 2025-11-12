@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 2px black solid;
+        padding: 10px;
+        width: max-content;
+       
+    }
+    .kontener{
+        border: none;
+        display: flex;
+        gap: 5px;
+    }
+    p{
+        text-align: right;
+        border-bottom: 1px solid black;
+    }
+
+</style>
+
+<body>
+    <div>
+        <p>Miarę kąta miedzy wskazówką minutową a godzinową, można obliczyć wedłóg wzoru:</p><img src="task_689.png"alt="">
+    </div>
+    <div class="kontener">
+        <div>Godziny h <span>&#8712;</span> [0;11] <br>
+            <input type="range" name="godz" id="godz" min="0" max="11" value="0"><br>
+            <p id="p_godz"></p>
+        </div>
+        <div>Minuty m <span>&#8712;</span> [0;60] <br>
+            <input type="range" name="min" id="min" min="0" max="60" value="0"><br>
+            <p id="p_min"></p>
+        </div>
+    </div>
+    <div>Kąt
+        <p id=""><span id="wynik"></span></p>
+    </div>
+</body>
+
+</html>
+<script src="zegar.js"></script>
