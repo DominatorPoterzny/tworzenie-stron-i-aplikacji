@@ -1,0 +1,4 @@
+SELECT * FROM `notatki` WHERE Osoby_id = 3 GROUP BY priorytet LIMIT 1;
+SELECT nazwa,priorytet FROM notatki WHERE nazwa LIKE "%na%";
+SELECT imie,notatki.nazwa FROM osoby INNER JOIN notatki ON osoby.id=notatki.Osoby_id WHERE notatki.priorytet = 5;
+SELECT osoby.imie,COUNT(notatki.id) FROM osoby INNER JOIN notatki ON osoby.id = notatki.Osoby_id GROUP BY Osoby_id;
