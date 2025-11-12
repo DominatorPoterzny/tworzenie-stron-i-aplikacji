@@ -8,7 +8,7 @@ let wier = input[1].value
 btn.addEventListener('click',log)
 function log(){
     table.innerHTML = " "
-    if ((input[0].value <= 500, input[1].value)<=500) {
+    if (input[0].value <= 500 && input[1].value <=500) {
 		
         for (let i = 1; i <= input[1].value; i++) {
 			    let tr = document.createElement('tr')
