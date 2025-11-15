@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planer zadań</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="kontener"></div>
     <aside><img src="obraz.jpg" alt="notatki"></aside>
-    <header><h2>Moje zadania</h2></header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+    <div class="kontener2">
+        <header>
+            <h2>Moje zadania</h2>
+        </header>
+        <nav><input type="text" name="dodaj" id="dodaj" placeholder="Dodaj zadanie..."><button id="btn">Dodaj</button>
+        </nav>
+        <main>
+            <ul>
+                <li>Wyprowadzić psa <button class="wyk">Wykonane</button></li>
+                <li>Gimnastyka <button class="wyk">Wykonane</button></li>
+                <li>Zakupy <button class="wyk">Wykonane</button></li>
+                <li>Spacer z kumplem <button class="wyk">Wykonane</button></li>
+                <li>Odrabianie lekcji z młodszą siostrą <button class="wyk">Wykonane</button></li>
+                <li>Projekt na geografię <button class="wyk">Wykonane</button></li>
+            </ul>
+        </main>
+        <footer>
+            <h3>Notatki: Poteżny Dominator</h3>
+        </footer>
+    </div>
+    </div>
 </body>
+
 </html>
+
+
+<script>
+    let wykonane = document.querySelectorAll('.wyk')
+    let li = document.querySelectorAll('li')
+    let ul = document.querySelector('ul')
+    let input = document.querySelectorAll('#dodaj')
+    let btn = document.querySelector('#btn')
+    btn.addEventListener('click', loga)
+    function loga() {
+
+        let newli = document.createElement('li')
+        let newbtn = document.createElement('button')
+        console.log(input[0].value)
+        newli.innerText = input[0].value
+        newbtn.innerText = 'Wykonane'
+        newbtn.className = "wyk"
+        ul.appendChild(newli)
+        newli.appendChild(newbtn)
+        wykonane = document.querySelectorAll('.wyk')
+
+    }
+    wykonane.forEach((element, i ) => {
+        element.addEventListener('click', log)
+        function log() {
+            console.log(i)
+            li[i].style.textDecoration = 'line-through'
+            console.log(`dupa ${i}`)
+        }
+    });
+
+</script>

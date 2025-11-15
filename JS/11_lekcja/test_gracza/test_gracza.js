@@ -36,7 +36,7 @@ pod.forEach((element, i) => {
 
 odp.forEach((element, i) => {
 	element.addEventListener('click', log)
-	function log(a) {
+	function log() {
 		const odpo = prompt(`Podaj odpowiedz na pytanie ${i + 1}:`)
 		if (odpo === ukr[i]) {
 			alert(`Twoja odpowiedz jest poprawna`)
