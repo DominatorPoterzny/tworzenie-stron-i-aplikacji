@@ -15,21 +15,21 @@
         <header>
             <h2>Moje zadania</h2>
         </header>
-        <nav><input type="text" name="dodaj" id="dodaj" placeholder="Dodaj zadanie..."><button id="btn">Dodaj</button>
+        <nav><input type="text" name="dodaj" id="dodaj" placeholder="Dodaj zadanie..."><button id="btn" onclick="dodaj()">Dodaj</button>
         </nav>
         <main>
             <ul>
-                <li>Wyprowadzić psa <button class="wyk">Wykonane</button></li>
-                <li>Gimnastyka <button class="wyk">Wykonane</button></li>
-                <li>Zakupy <button class="wyk">Wykonane</button></li>
-                <li>Spacer z kumplem <button class="wyk">Wykonane</button></li>
-                <li>Odrabianie lekcji z młodszą siostrą <button class="wyk">Wykonane</button></li>
-                <li>Projekt na geografię <button class="wyk">Wykonane</button></li>
+                <li><span>Wyprowadzić psa</span> <button class="wyk" onclick="zakresl(this)">Wykonane</button></li>
+                <li><span>Gimnastyka</span> <button class="wyk" onclick="zakresl(this)">Wykonane</button></li>
+                <li><span>Zakupy</span> <button class="wyk" onclick="zakresl(this)">Wykonane</button></li>
+                <li><span>Spacer z kumplem</span> <button class="wyk" onclick="zakresl(this)">Wykonane</button></li>
+                <li><span>Odrabianie lekcji z młodszą siostrą</span> <button class="wyk" onclick="zakresl(this)">Wykonane</button></li>
+                <li><span>Projekt na geografię</span><button class="wyk" onclick="zakresl(this)">Wykonane</button></li>
             </ul>
         </main>
         <footer>
             <h3>Notatki: Poteżny Dominator</h3>
-        </footer>
+        </footer> 
     </div>
     </div>
 </body>
@@ -43,27 +43,33 @@
     let ul = document.querySelector('ul')
     let input = document.querySelectorAll('#dodaj')
     let btn = document.querySelector('#btn')
-    btn.addEventListener('click', loga)
-    function loga() {
+    // btn.addEventListener('click', loga)
+
+    // wykonane.forEach((element, i) => {
+    //     element.addEventListener('click', log)
+    //     function log() {
+    //         console.log(i)
+    //         li[i].style.textDecoration = 'line-through'
+    //         console.log(`numer ${i}`)
+
+    //     }
+    // });
+    function zakresl(element){
+        let li1 = element.parentElement
+        console.log(li1)
+        li1.style.textDecoration = 'line-through'
+    }
+    function dodaj() {
 
         let newli = document.createElement('li')
         let newbtn = document.createElement('button')
-        console.log(input[0].value)
-        newli.innerText = input[0].value
+        // console.log(input[0].value)
+        // newli.innerText = input[0].value
         newbtn.innerText = 'Wykonane'
         newbtn.className = "wyk"
         ul.appendChild(newli)
-        newli.appendChild(newbtn)
-        wykonane = document.querySelectorAll('.wyk')
+        newli.innerHTML = `<span>${input[0].value}</span> <button class="wyk" onclick="zakresl(this)">Wykonane</button>`
+
 
     }
-    wykonane.forEach((element, i ) => {
-        element.addEventListener('click', log)
-        function log() {
-            console.log(i)
-            li[i].style.textDecoration = 'line-through'
-            console.log(`dupa ${i}`)
-        }
-    });
-
 </script>
