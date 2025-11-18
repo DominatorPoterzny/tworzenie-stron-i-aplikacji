@@ -7,27 +7,58 @@
     <title>Document</title>
 </head>
 <style>
-    div{
+    div {
         border: 2px black solid;
         padding: 10px;
         width: max-content;
-       
+        border-radius: 10px;
+
     }
-    .kontener{
+    #kat{
+        width: 150px;
+    }
+
+    .kontener {
         border: none;
         display: flex;
         gap: 5px;
     }
-    p{
+
+    p {
         text-align: right;
         border-bottom: 1px solid black;
     }
 
+    .zegar {
+        border: 2px black solid;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .hand {
+        width: 50%;
+        background: black;
+        /* transform-origin: 100%; */
+        transform: rotate(90deg);
+    }
+
+    .hour-hand {
+        height: 6px;
+        position: relative;
+        
+    }
+
+    .minute-hand {
+        height: 4px;
+    }
 </style>
 
 <body>
     <div>
-        <p>Miarę kąta miedzy wskazówką minutową a godzinową, można obliczyć wedłóg wzoru:</p><img src="task_689.png"alt="">
+        <p>Miarę kąta miedzy wskazówką minutową a godzinową, można obliczyć wedłóg wzoru:</p><img src="task_689.png"
+            alt="">
     </div>
     <div class="kontener">
         <div>Godziny h <span>&#8712;</span> [0;11] <br>
@@ -39,7 +70,12 @@
             <p id="p_min"></p>
         </div>
     </div>
-    <div>Kąt
+    <div class="zegar">
+        <p class="hand hour-hand"></p>
+        <p class="hand minute-hand"></p>
+    </div>
+    <br>
+    <div id="kat">Kąt
         <p id=""><span id="wynik"></span></p>
     </div>
 </body>
