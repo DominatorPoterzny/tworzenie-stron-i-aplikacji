@@ -1,0 +1,55 @@
+body{
+    font-family: Bookman,serif;
+    display: flex;
+    flex-direction: column;
+}
+.kontener{
+    display: flex;
+}
+header,footer{
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+section{
+    background-color: blueviolet;
+    padding: 10px;
+    text-align: right;
+}
+aside{
+    background-color: lavender;
+    height: 500px;
+}
+.left{
+    width: 25%;
+}
+.right{
+    width: 35%;
+}
+main{
+    background-color: ghostwhite;
+    text-align: center;
+    height: 500px;
+    width: 40%;
+}
+img{
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+section>p{
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+}
+table,form{
+    margin: 30px;
+}
+table,td{
+    border-collapse: collapse;
+    border: solid 1px indigo;
+}
+td,th{
+    padding: 3px;
+}
