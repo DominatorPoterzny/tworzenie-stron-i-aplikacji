@@ -1,0 +1,4 @@
+SELECT imie,nazwisko,klasa FROM uczniowie WHERE klasa = "2B";
+SELECT COUNT(id_alergii IS NULL)AS "uczniowie_bez_alergii",SUM(id_alergii LIKE "%")AS "uczniowie_z_alergia" FROM uczniowie;
+SELECT DISTINCT imie,nazwisko,klasa FROM uczniowie JOIN zamowienia ON uczniowie.id_ucznia=zamowienia.id_ucznia JOIN posilki ON zamowienia.id_posilku=posilki.id_posilku WHERE posilki.wegetarianski=1;
+SELECT typy_posilkow.nazwa,COUNT(posilki.id_typu) FROM typy_posilkow JOIN posilki ON typy_posilkow.id_typu = posilki.id_typu GROUP BY typy_posilkow.id_typu;
