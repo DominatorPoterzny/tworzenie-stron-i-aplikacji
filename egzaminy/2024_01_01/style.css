@@ -1,0 +1,54 @@
+* {
+}
+body {
+	width: 90%;
+	margin: auto;
+	background-color: #eeeeee;
+	font-family: Helvetica;
+    display: flex;
+    flex-direction: column;
+}
+.kontener{
+    /* display: flex;
+    flex-direction: row; */
+}
+.kontener2{
+    display: flex;
+}
+.logo,
+.menu {
+	background-color: lightblue;
+	height: 100px;
+	width: 50%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.baner {
+	background-color: #ddd;
+	height: 200px;
+}
+main {
+	color: navy;
+	margin: 50px;
+	height: 400px;
+}
+footer {
+	text-align: right;
+	background-color: lightblue;
+	padding: 10px;
+}
+button {
+	background-color: lightblue;
+	color: navy;
+}
+.menu a {
+	color: navy;
+	font-size: 150%;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 10px;
+	padding: 5px;
+}
+.menu a:hover {
+	border: solid 1px navy;
+}
