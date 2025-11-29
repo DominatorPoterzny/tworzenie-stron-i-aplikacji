@@ -12,6 +12,9 @@ body {
     /* display: flex;
     flex-direction: row; */
 }
+span{
+	text-transform: uppercase;
+}
 .kontener2{
     display: flex;
 }

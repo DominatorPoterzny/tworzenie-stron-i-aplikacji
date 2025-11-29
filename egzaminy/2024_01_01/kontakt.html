@@ -23,33 +23,37 @@
 
     <main>
         <h2>Kontakt</h2>
-        <table>
-            <tr>
-                <td>Imię:</td>
-                <td><input type="text" name="imie" id="imie"></td>
-            </tr>
-            <tr>
-                <td>Nazwisko</td>
-                <td><input type="text" name="nazwisko" id="nazwisko"></td>
-            </tr>
-            <tr>
-                <td>E-mail</td>
-                <td><input type="email" name="email" id="email"></td>
-            </tr>
-            <tr>
-                <td>Zgłoszenie</td>
-                <td><textarea name="zgloszenie" id="zgloszenie" cols="40" rows="10"></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="checkbox" name="zgoda" id="zgoda">Zapoznałam/em się z regulaminem</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button type="reset">Resetuj</button> <button type="button" onclick="przeslij()">Prześlij</button></td>
-            </tr>
-            
-        </table>
+        <form action="">
+            <table>
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" name="imie" id="imie"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko</td>
+                    <td><input type="text" name="nazwisko" id="nazwisko"></td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Zgłoszenie</td>
+                    <td><textarea name="zgloszenie" id="zgloszenie" cols="40" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="zgoda" id="zgoda">Zapoznałam/em się z regulaminem</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="reset">Resetuj</button>
+                        <button type="button" onclick="przeslij()">Prześlij</button>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
         <hr>
         <p id="wiadomosc"></p>
     </main>
