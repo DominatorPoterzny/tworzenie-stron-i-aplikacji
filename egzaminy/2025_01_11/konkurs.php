@@ -38,7 +38,8 @@
                         <td><?=   $row['opis'] ?></td>
                         <td><?=   $row['cena'] ?></td>
                     </tr>
-                <?php  }
+                <?php  };
+                mysqli_close($connect);
                 ?>
             </table>
         </aside>
