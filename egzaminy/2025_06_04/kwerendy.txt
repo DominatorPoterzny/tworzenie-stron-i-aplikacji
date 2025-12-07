@@ -1,0 +1,4 @@
+SELECT id_zadania,zadanie,data FROM zadania;
+INSERT INTO zadania (zadanie,data,osoba_id) VALUES ("spotkanie firmowe","2024-05-10",1)
+DELETE FROM zadania WHERE id_zadania = 2;
+SELECT imie,nazwisko,telefon,zadania.zadanie,zadania.data FROM osoby INNER JOIN zadania ON osoby.id_osoba=zadania.osoba_id;
