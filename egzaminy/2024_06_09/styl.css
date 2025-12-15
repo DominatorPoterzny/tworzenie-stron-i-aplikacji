@@ -1,0 +1,57 @@
+*{
+    font-family: georgia;
+    color: white;
+}
+header,footer{   
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+.lewy, .prawy, .srodek{
+    background-color: lightsalmon;
+    height: 527px;
+}
+.lewy,.prawy{
+    width: 15%;
+}
+.srodek{
+    width: 70%;
+}
+.miniatury{
+    background-color: maroon;
+    height: 70px;
+}
+button{
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+.miniatury img{
+    height: 70px;
+    animation: marg 4s;
+}
+@keyframes marg{
+    from {padding-left: 50px;}
+    to{padding-left: 0;}
+}
+.srodek img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+}
+.srodek img:hover{
+    animation: scala 5s;
+    scale: 120%;
+
+}
+@keyframes scala{
+    from{scale: 100%;}
+    to{scale: 120%;}
+}
+.kontener{
+    display: flex;
+}
