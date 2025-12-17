@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaż paneli podłogowych</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="kontener">
+    <header>
+        <img src="montaz_paneli.png" alt="firma usługowa">
+    </header>
+    <nav>
+        <a href="index.html">Strona Główna</a><a href="oferta.html">Oferta</a><a href="koszty.html">Kalkulator kosztów</a>
+    </nav>
+    <main>
+        <h1>Kalkulator kosztów</h1>
+        <label for="szerokosc">Szerokość pomieszczenia[m]</label><input type="number" name="szerokosc" id="szerokosc">
+        <label for="dlugosc">Długość pomieszczenia [m]</label><input type="number" name="dlugosc" id="dlugosc">
+        <p>Typ panelu</p>
+        <input type="radio" name="panel" id="laminowane"><label for="">Panele laminowane</label><br>
+        <input type="radio" name="panel" id="winylowe"><label for="">Panele winylowe</label><br>
+        <input type="radio" name="panel" id="deska"><label for="">Deska podłogowa</label><br>
+        <button type="button" onclick="oblicz()">Oblicz</button>
+        <p id="p1"></p>
+    </main>
+    <footer><h5>Autor strony: Potężny Dominator</h5></footer>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
