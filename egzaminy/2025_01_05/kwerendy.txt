@@ -1,0 +1,4 @@
+SELECT Data,Temat FROM szkolenia ORDER BY Data ASC;
+SELECT Data,Temat,Nazwisko, Imie FROM szkolenia JOIN zapisy ON szkolenia.Id = zapisy.Id_szkolenia JOIN sluchacze ON zapisy.Id_klienta =sluchacze.Id;
+SELECT Imie,Nazwisko,COUNT(szkolenia.Id) FROM trenerzy JOIN szkolenia ON trenerzy.Id=szkolenia.Id_trenera GROUP BY Imie;
+ALTER TABLE zapisy CHANGE COLUMN Id_klienta Id_sluchacza int;
