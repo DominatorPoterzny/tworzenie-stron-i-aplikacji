@@ -4,8 +4,9 @@ function doprzodu(){
     console.log(licznik)
     console.log('dupaprzód')
     if(licznik !=8){
-        aktywnezdjecie.src = `${licznik}.jpg`
         licznik ++
+        aktywnezdjecie.src = `${licznik}.jpg`
+        
     }else{
         aktywnezdjecie.src = `1.jpg`
         licznik = 1
