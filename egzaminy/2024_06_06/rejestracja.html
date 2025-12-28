@@ -12,29 +12,33 @@
     </header>
     <main>
         <form action="">
-        <section>
+        <section id="pierwszy_blok">
             <h2>Dane osobowe</h2>
             <input type="text" name="imie" id="imie" required placeholder="Wpisz imię...">
             <input type="text" name="nazwisko" id="nazwisko" required placeholder="Wpisz nazwisko...">
-            <button type="button">Następna karta</button>
+            <button  onclick="pierwsza_zmiana()">Następna karta</button>
 
         </section>
-        <section>
+        <section id="drugi_blok">
             <h2>Dane kontaktowe</h2>
             <input type="email" name="email" id="email" placeholder="Twój e-mail...">
             <input type="tel" name="telefon" id="telefon" placeholder="Twój numer telefonu">
-            <button type="button">Następna karta</button>
+            <button  onclick="druga_zmiana()">Następna karta</button>
         </section>
-        <section>
+        <section id="trzeci_blok">
             <h2>Hasło do logowania</h2>
             <input type="password" name="haslo" id="haslo" placeholder="Podaj hasło">
             <input type="password" name="haslo2" id="haslo2" placeholder="Powtórz hasło">
-            <button type="button">Zatwierdź</button>
+            <button  onclick="trzecia_zmiana()">Zatwierdź</button>
         </section>
         </form>
     </main>
+    <div class="kontener">
     <footer>
-        <video src="motyl.mp4">Przeglądarka nie obsługuje tego formatu</video>
+        <video  controls>
+            <source src="motyl.mp4" type="video/mp4">
+            Przeglądarka nie obsługuje tego formatu
+        </video>
         
     </footer>
     <footer>
@@ -56,5 +60,7 @@
     <footer>
         <p>Formularz wykonał: Potężny Dominator</p>
     </footer>
+    </div>
 </body>
 </html>
+<script src="main.js"></script>
