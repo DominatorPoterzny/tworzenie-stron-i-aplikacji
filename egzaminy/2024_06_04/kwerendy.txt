@@ -1,0 +1,4 @@
+SELECT tytul,plik FROM zdjecia WHERE polubienia >= 100;
+SELECT tytul,plik,polubienia,imie,nazwisko FROM zdjecia JOIN autorzy ON zdjecia.autorzy_id = autorzy.id ORDER BY nazwisko ASC;
+SELECT imie,COUNT(autorzy_id) FROM autorzy JOIN zdjecia ON autorzy.id=zdjecia.autorzy_id GROUP BY autorzy_id;
+ALTER TABLE zdjecia ADD COLUMN rozmiarPliku int
