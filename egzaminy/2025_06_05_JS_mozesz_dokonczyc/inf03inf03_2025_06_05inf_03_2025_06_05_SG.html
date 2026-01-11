@@ -55,7 +55,6 @@
 
 </html>
 <script>
-    let btn = document.querySelector('#btn')
     let zdj = document.querySelector('#obraz')
     let kopie = document.querySelector('#kopie')
     let mat = document.querySelector('#mat')
@@ -66,15 +65,5 @@
     let p1 = document.createElement('p')
     let p2 = document.createElement('p')
 
-    btn.addEventListener('click', log)
-    function log() {
-        if (mat.checked === true) {
-            div.append(p1)
-            p1.innerHTML = `Liczba Kopii:${kopie.value}`
-            
 
-        } else {
-            console.log("dupa")
-        }
-    }
 </script>
