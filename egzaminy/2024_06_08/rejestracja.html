@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep-rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+
+    <aside>
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </aside>
+
+    <header>
+        <h1>Zarejestruj się w sklepie</h1>
+    </header>
+    <main>
+        <button type="button" onclick="pokaz_pierwszy()">Klient</button>
+        <button type="button" onclick="pokaz_drugi()">Adres</button>
+        <button type="button" onclick="pokaz_trzeci()">Kontakt</button>
+        <section id="pierwszy">
+            <p>Imię</p>
+            <input type="text" name="imie" id="imie" placeholder="Wpisz dane..." onblur="pasek()">
+            <p>Nazwisko</p>
+            <input type="text" name="nazwisko" id="nazwisko" onblur="pasek()">
+            <p>Data urodzenia</p>
+            <input type="date" name="data" id="data" onblur="pasek()">
+        </section>
+        <section id="drugi">
+            <p>Ulica</p>
+            <input type="text" name="ulica" id="ulica" onblur="pasek()">
+            <p>Numer</p>
+            <input type="number" name="numer" id="numer" onblur="pasek()">
+            <p>Miasto</p>
+            <input type="text" name="miasto" id="miasto" onblur="pasek()">
+        </section>
+        <section id="trzeci">
+            <p>Numer komórkowy</p>
+            <input type="tel" name="tel" id="tel" onblur="pasek()"><br>
+            <input type="checkbox" name="rodo" id="rodo" onblur="pasek()">
+            <label for="rodo">Akceptuje RODO</label> <br>
+            <button type="button" onclick="zatwierdz()">Zatwierdź dane</button>
+        </section>
+    </main>
+    <section id="blok_postepu"><div id="postep"></div></section>
+
+
+
+    <footer>
+        <h4>Rejestrację do sklepu wykonał: Potężny Dominator</h4>
+    </footer>
+
+</body>
+
+</html>
+<script src="main.js"></script>
