@@ -1,0 +1,4 @@
+kw1:SELECT marka, model, cena FROM pojazdy WHERE marka='BM' order by cena desc limit 15;
+kw2:SELECT avg(cena) as 'Średnia cena',max(cena) as 'Maksymalna cena' FROM pojazdy WHERE model='meta';
+kw3:SELECT p.marka ,p.model ,p.cena ,k.nazwa ,k.doplata from pojazdy as p join kolory as k on p.kolor=k.id where p.model='alfa';
+kw4:SELECT marka ,model ,cena from pojazdy order by rand() limit 2;
